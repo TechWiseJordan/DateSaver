@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DateSaver.CreatePage"
+             Title="CreatePage">
+    <VerticalStackLayout 
+         Padding="0,0"
+         Spacing="25">
+        <Label Padding="10"
+            Margin="10"
+            Text="Welcome to the DB Test Page"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <VerticalStackLayout Padding="20" FlexLayout.Basis="400" BackgroundColor="Grey">
+            <Entry x:Name="nameEntryField" Placeholder="Name" />
+            <Entry x:Name="emailEntryField" Placeholder="Email" />
+            <Entry x:Name="mobileEntryField" Placeholder="Mobile" />
+            <Button x:Name="saveBtn" Text="Save" Clicked="saveBtn_Clicked" />
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
