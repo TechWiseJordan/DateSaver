@@ -6,7 +6,7 @@ public partial class CreatePage : ContentPage
 {
     private readonly LocalDbService _dbService;
     private int _editDateId;
-    
+    // This is a test comment delete me
 
     public CreatePage(LocalDbService dbService) // Default constuctor which should NOT be called
     {
