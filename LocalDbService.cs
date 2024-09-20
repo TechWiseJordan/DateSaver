@@ -27,7 +27,7 @@ namespace DateSaver
             await _connection.InsertAsync(date);
         }
 
-        // READ
+        // Read
         public async Task<List<Date>> GetDates()
         {
             return await _connection.Table<Date>().ToListAsync();

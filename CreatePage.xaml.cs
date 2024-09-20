@@ -34,9 +34,10 @@ public partial class CreatePage : ContentPage
         InitializeComponent();
         _dbService = dbService;
 
-        _editDateId = id;
+        //_editDateId = id;
         var editDate = (Date)e.Item;
 
+        /*
         if (_editDateId != 0)
         {
             _editDateId = editDate.Id;
@@ -44,6 +45,12 @@ public partial class CreatePage : ContentPage
             emailEntryField.Text = editDate.Email;
             mobileEntryField.Text = editDate.Mobile;
         }
+        */
+
+        _editDateId = editDate.Id;
+        nameEntryField.Text = editDate.CustomerName;
+        emailEntryField.Text = editDate.Email;
+        mobileEntryField.Text = editDate.Mobile;
     }
 
     private async void saveBtn_Clicked(object sender, EventArgs e)
