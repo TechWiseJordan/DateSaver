@@ -17,37 +17,7 @@ public partial class MainPage : ContentPage
 
         // Go to create page
         //await Shell.Current.GoToAsync("CreatePage");
-
-
-        if (_editDateId == 0)
-        {
-            // Add Customer
-
-            await _dbService.Create(new Date
-            {
-                CustomerName = nameEntryField.Text,
-                Email = emailEntryField.Text,
-                Mobile = mobileEntryField.Text
-            });
-        }
-        else
-        {
-            // Edit Customer
-
-            await _dbService.Update(new Date
-            {
-                Id = _editDateId,
-                CustomerName = nameEntryField.Text,
-                Email = emailEntryField.Text,
-                Mobile = mobileEntryField.Text
-            });
-
-            _editDateId = 0;
-        }
-
-        nameEntryField.Text = string.Empty;
-        emailEntryField.Text = string.Empty;
-        mobileEntryField.Text = string.Empty;
+        await Navigation.PushModalAsync(new CreatePage(_dbService, _editDateId));
 
         listView.ItemsSource = await _dbService.GetDates();
     }
@@ -61,10 +31,7 @@ public partial class MainPage : ContentPage
         {
             case "Edit":
 
-                _editDateId = date.Id;
-                nameEntryField.Text = date.CustomerName;
-                emailEntryField.Text = date.Email;
-                mobileEntryField.Text = date.Mobile;
+                await Navigation.PushModalAsync(new CreatePage(_dbService, _editDateId, e));
 
                 break;
             case "Delete":

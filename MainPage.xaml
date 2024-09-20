@@ -5,23 +5,7 @@
 
     <Grid Padding="18">
         <ScrollView>
-            <VerticalStackLayout Padding="30,0" Spacing="25">
-                <Label
-                Text="Hello, World!
-                    
-                    
-                    Lorem ipsum odor amet, consectetuer adipiscing elit. Tincidunt tincidunt torquent potenti, nullam habitant turpis eu montes hendrerit. Praesent ex dolor commodo potenti finibus. Sollicitudin lectus enim ut nulla laoreet imperdiet. Nulla nisl ad; ridiculus elementum ex id tellus. In fusce adipiscing praesent pretium viverra facilisis imperdiet curabitur. Turpis ornare augue lectus mi dictum magna tempor auctor.
-
-Sollicitudin donec accumsan donec odio eleifend diam aliquet. Faucibus metus vitae vestibulum himenaeos gravida curae fames. Convallis urna elit montes eu imperdiet tempus proin. Nibh justo blandit molestie dui consequat. Consequat aenean cursus efficitur penatibus litora. Blandit magna taciti vitae maximus hac cursus proin nisl. Litora quam eu ornare; rhoncus viverra porttitor. Vestibulum semper eleifend porttitor aliquam ex turpis.
-
-Hac mi pharetra fringilla faucibus ornare curae ultricies at finibus. Dolor sociosqu montes auctor fringilla quis. In sit luctus, potenti montes per erat consequat interdum. Felis placerat eleifend turpis tincidunt lobortis ac nec vivamus neque. Felis nam feugiat cras parturient; justo varius accumsan ligula. Vestibulum orci semper suspendisse sem iaculis eros tempus. Tristique sollicitudin mauris torquent aliquet malesuada magnis diam nam. Sapien mauris lobortis eget facilisis fusce sociosqu. Dolor urna torquent sociosqu hac parturient habitasse. Ultrices nec efficitur ex ullamcorper orci dis ipsum."
-                />
-                <VerticalStackLayout Padding="20" FlexLayout.Basis="400" BackgroundColor="Grey">
-                    <Entry x:Name="nameEntryField" Placeholder="Name" />
-                    <Entry x:Name="emailEntryField" Placeholder="Email" />
-                    <Entry x:Name="mobileEntryField" Placeholder="Mobile" />
-                    <Button x:Name="saveBtn" Text="Save" Clicked="saveBtn_Clicked" />
-                </VerticalStackLayout>
+            <VerticalStackLayout Padding="0,0" Spacing="55">
                 <ListView x:Name="listView" FlexLayout.Grow="1" HasUnevenRows="True" ItemTapped="listView_ItemTapped">
                     <ListView.ItemTemplate>
                         <DataTemplate>

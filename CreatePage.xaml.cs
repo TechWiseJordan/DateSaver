@@ -78,6 +78,8 @@ public partial class CreatePage : ContentPage
         emailEntryField.Text = string.Empty;
         mobileEntryField.Text = string.Empty;
 
+        await Navigation.PushModalAsync(new MainPage(_dbService));
+
         //listView.ItemsSource = await _dbService.GetDates();
     }
 }
