@@ -19,7 +19,7 @@
       "RelativeMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|solutionrelative:date.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|c:\\users\\droj1\\onedrive\\documents\\programs\\datesaver\\createpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\createpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|solutionrelative:createpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "LocalDbService.cs",
               "ToolTip": "C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\LocalDbService.cs",
               "RelativeToolTip": "LocalDbService.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAQwC4AAAAwAAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAIwDgAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-23T17:11:36.887Z",
               "EditorCaption": ""
@@ -59,8 +59,7 @@
               "RelativeToolTip": "CreatePage.xaml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-09-18T20:28:21.767Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-18T20:28:21.767Z"
             },
             {
               "$type": "Document",
@@ -72,8 +71,7 @@
               "RelativeToolTip": "CreatePage.xaml.cs",
               "ViewState": "AQIAADsAAAAAAAAAAAAIwE0AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T20:45:11.572Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-18T20:45:11.572Z"
             },
             {
               "$type": "Document",
@@ -85,8 +83,7 @@
               "RelativeToolTip": "Date.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T19:07:06.382Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-13T19:07:06.382Z"
             },
             {
               "$type": "Document",
@@ -98,8 +95,7 @@
               "RelativeToolTip": "MainPage.xaml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAABXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-09-13T18:39:22.072Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-13T18:39:22.072Z"
             },
             {
               "$type": "Document",
@@ -111,8 +107,7 @@
               "RelativeToolTip": "MainPage.xaml.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAxwAsAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T18:39:23.371Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-13T18:39:23.371Z"
             }
           ]
         }

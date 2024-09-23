@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DateSaver
 {
@@ -53,7 +54,7 @@ namespace DateSaver
         public async Task UpdateCountDown()
         {
             List <Date> resultsFromSQL = await _connection.Table<Date>().ToListAsync();
-
+            /*
             int i = 0;
             if (resultsFromSQL.Count != 0)
             {
@@ -67,6 +68,16 @@ namespace DateSaver
                     i++;
                 }
             }
+            */
+            foreach (Date date in resultsFromSQL) 
+            {
+                date.CountDown = (date.DateSaved.Date - currentDate.Date).Days;
+                await _connection.UpdateAsync(date);
+            }
+
+
+
+
 
             /*
             await _connection.UpdateAllAsync<Date>();
