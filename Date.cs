@@ -1,4 +1,5 @@
 ﻿using SQLite;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DateSaver
 {
@@ -10,13 +11,14 @@ namespace DateSaver
         [Column("id")]
         public int Id { get; set; }
 
-        [Column("customer_name")]
-        public string CustomerName { get; set; }
+        [Column("date_name")]
+        public string DateName { get; set; }
 
-        [Column("email")]
-        public string Email { get; set; }
+        [AllowNull]
+        [Column("description")]
+        public string Description { get; set; }
 
-        [Column("mobile")]
-        public string Mobile { get; set; }
+        [Column("date_saved")]
+        public DateTime DateSaved { get; set; }
     }
 }

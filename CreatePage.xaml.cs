@@ -6,7 +6,7 @@ public partial class CreatePage : ContentPage
 {
     private readonly LocalDbService _dbService;
     private int _editDateId;
-    // This is a test comment delete me
+    private DateTime _editDateSaved;
 
     public CreatePage(LocalDbService dbService) // Default constuctor which should NOT be called
     {
@@ -48,9 +48,14 @@ public partial class CreatePage : ContentPage
         */
 
         _editDateId = editDate.Id;
-        nameEntryField.Text = editDate.CustomerName;
-        emailEntryField.Text = editDate.Email;
-        mobileEntryField.Text = editDate.Mobile;
+        nameEntryField.Text = editDate.DateName;
+        descriptionEntryField.Text = editDate.Description;
+        dateEntryField.Date = editDate.DateSaved;
+    }
+
+    private void DateSelected(object sender, DateChangedEventArgs e)
+    {
+        _editDateSaved = dateEntryField.Date;
     }
 
     private async void saveBtn_Clicked(object sender, EventArgs e)
@@ -61,9 +66,9 @@ public partial class CreatePage : ContentPage
 
             await _dbService.Create(new Date
             {
-                CustomerName = nameEntryField.Text,
-                Email = emailEntryField.Text,
-                Mobile = mobileEntryField.Text
+                DateName = nameEntryField.Text,
+                Description = descriptionEntryField.Text,
+                DateSaved = _editDateSaved
             });
         }
         else
@@ -73,17 +78,17 @@ public partial class CreatePage : ContentPage
             await _dbService.Update(new Date
             {
                 Id = _editDateId,
-                CustomerName = nameEntryField.Text,
-                Email = emailEntryField.Text,
-                Mobile = mobileEntryField.Text
+                DateName = nameEntryField.Text,
+                Description = descriptionEntryField.Text,
+                DateSaved = _editDateSaved
             });
 
             _editDateId = 0;
         }
 
         nameEntryField.Text = string.Empty;
-        emailEntryField.Text = string.Empty;
-        mobileEntryField.Text = string.Empty;
+        descriptionEntryField.Text = string.Empty;
+        //dateEntryField.Date = string.Empty;
 
         await Navigation.PushModalAsync(new MainPage(_dbService));
 

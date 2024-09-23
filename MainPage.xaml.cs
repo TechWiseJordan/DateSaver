@@ -10,6 +10,25 @@ public partial class MainPage : ContentPage
         InitializeComponent();
         _dbService = dbService;
         Task.Run(async () => listView.ItemsSource = await _dbService.GetDates());
+        /*
+        foreach (var item in listView.ItemsSource)
+        {
+            var dateItem = (Date)item;
+            dateItem.DateSaved = dateItem.DateSaved.Date;
+        }
+        
+        foreach (Date tempDate in listView.ItemsSource)
+        {
+            tempDate.DateSaved = tempDate.DateSaved.Date;
+        }
+
+        for (int i = 0; i < listView.ChildCount; i++)
+        {
+            var row = listView.GetChildAt(i).Tag as ImageAdapterViewHolder;
+            row.SelectImage.Checked = false;
+            listView.GetChildElements
+        }
+        */
     }
 
     private async void newBtn_Clicked(object sender, EventArgs e)

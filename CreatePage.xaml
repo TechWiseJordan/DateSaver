@@ -13,8 +13,13 @@
             HorizontalOptions="Center" />
         <VerticalStackLayout Padding="20" FlexLayout.Basis="400" BackgroundColor="Grey">
             <Entry x:Name="nameEntryField" Placeholder="Name" />
-            <Entry x:Name="emailEntryField" Placeholder="Email" />
-            <Entry x:Name="mobileEntryField" Placeholder="Mobile" />
+            <Entry x:Name="descriptionEntryField" Placeholder="Description" />
+            <DatePicker
+                x:Name="dateEntryField"
+                Format="d"
+                MinimumDate="01/01/1900"
+                DateSelected="DateSelected"
+            />
             <Button x:Name="saveBtn" Text="Save" Clicked="saveBtn_Clicked" />
         </VerticalStackLayout>
     </VerticalStackLayout>
