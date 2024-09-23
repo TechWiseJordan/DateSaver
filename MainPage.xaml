@@ -11,15 +11,15 @@
                         <DataTemplate>
                             <ViewCell>
                                 <VerticalStackLayout Padding="10">
-                                    <Label Text="{Binding DateName}" FontSize="17" FontAttributes="Bold" />
+                                    <Label Text="{Binding DateName}" FontSize="20" FontAttributes="Bold" />
                                     <Grid>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="Auto" />
                                             <ColumnDefinition Width="*" />
                                             <ColumnDefinition Width="Auto" />
                                         </Grid.ColumnDefinitions>
-                                        <Label Grid.Column="0" Text="{Binding Description}" />
-                                        <Label Grid.Column="2" Text="{Binding DateSaved}" FontAttributes="Bold" />
+                                        <Label Grid.Column="0" Text="{Binding DateSaved, StringFormat='{0:d}'}" FontAttributes="Bold" />
+                                        <Label Grid.Column="2" Text="{Binding CountDown, StringFormat='{0:d} Days'}" FontAttributes="Bold" />
                                     </Grid>
                                 </VerticalStackLayout>
                             </ViewCell>

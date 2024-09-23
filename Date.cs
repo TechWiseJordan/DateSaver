@@ -20,5 +20,8 @@ namespace DateSaver
 
         [Column("date_saved")]
         public DateTime DateSaved { get; set; }
+
+        [Column("countdown")]
+        public int CountDown { get; set; }
     }
 }

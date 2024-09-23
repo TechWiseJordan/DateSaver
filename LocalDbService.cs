@@ -11,6 +11,8 @@ namespace DateSaver
     {
         private const string DB_NAME = "dateSaver_local_db.db3";
         private readonly SQLiteAsyncConnection _connection;
+        private DateTime currentDate = DateTime.Now;
+
 
         public LocalDbService()
         {
@@ -25,6 +27,8 @@ namespace DateSaver
         public async Task Create(Date date)
         {
             await _connection.InsertAsync(date);
+
+            await UpdateCountDown();
         }
 
         // Read
@@ -41,6 +45,44 @@ namespace DateSaver
         public async Task Update(Date date)
         {
             await _connection.UpdateAsync(date);
+
+            await UpdateCountDown();
+        }
+
+        // Test
+        public async Task UpdateCountDown()
+        {
+            List <Date> resultsFromSQL = await _connection.Table<Date>().ToListAsync();
+
+            int i = 0;
+            if (resultsFromSQL.Count != 0)
+            {
+                while (i < resultsFromSQL.Count)
+                {
+                    Date test = await GetById(i+1);
+                    test.CountDown = (test.DateSaved.Date - currentDate.Date).Days;
+
+                    await _connection.UpdateAsync(test);
+
+                    i++;
+                }
+            }
+
+            /*
+            await _connection.UpdateAllAsync<Date>();
+
+
+            await _connection.UpdateAllAsync<Date>(date.CountDown = 1);
+
+
+            await _connection.UpdateAllAsync(date.CountDown = 1);
+
+            foreach (var item in _connection.Table<Date>)
+            {
+
+            }
+            await _connection.UpdateAsync(date.CountDown);
+            */
         }
 
         // Delete
