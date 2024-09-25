@@ -23,5 +23,8 @@ namespace DateSaver
 
         [Column("countdown")]
         public int CountDown { get; set; }
+
+        [Column("repeatdate")]
+        public Boolean RepeatDate { get; set; }
     }
 }

@@ -14,25 +14,6 @@ public partial class MainPage : ContentPage
         dbService.UpdateCountDown();
 
         Task.Run(async () => listView.ItemsSource = await _dbService.GetDates());
-        /*
-        foreach (var item in listView.ItemsSource.GetEnumerator)
-        {
-
-        }
-        
-        foreach (Date tempDate in listView.ItemsSource)
-        {
-            tempDate.DateSaved = tempDate.DateSaved.Date;
-        }
-        
-        for (int i = 0; i < listView.ChildCount; i++)
-        {
-            var row = listView.GetChildAt(i).Tag as ImageAdapterViewHolder;
-            row.SelectImage.Checked = false;
-            listView.GetChildElements
-        }
-        */
-        //dbService.UpdateCountDown();
     }
 
     private async void newBtn_Clicked(object sender, EventArgs e)
@@ -49,7 +30,7 @@ public partial class MainPage : ContentPage
     {
         var date = (Date)e.Item;
         countDown = (date.DateSaved.Date - currentDate.Date).Days;
-        var action = await DisplayActionSheet(countDown.ToString(), "Cancel", null, "Edit", "Delete");
+        var action = await DisplayActionSheet("Action", "Cancel", null, "Edit", "Delete");
 
         switch (action)
         {

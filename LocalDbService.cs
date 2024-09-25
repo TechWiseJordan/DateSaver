@@ -50,50 +50,16 @@ namespace DateSaver
             await UpdateCountDown();
         }
 
-        // Test
+        // Display number of days until date
         public async Task UpdateCountDown()
         {
             List <Date> resultsFromSQL = await _connection.Table<Date>().ToListAsync();
-            /*
-            int i = 0;
-            if (resultsFromSQL.Count != 0)
-            {
-                while (i < resultsFromSQL.Count)
-                {
-                    Date test = await GetById(i+1);
-                    test.CountDown = (test.DateSaved.Date - currentDate.Date).Days;
 
-                    await _connection.UpdateAsync(test);
-
-                    i++;
-                }
-            }
-            */
             foreach (Date date in resultsFromSQL) 
             {
                 date.CountDown = (date.DateSaved.Date - currentDate.Date).Days;
                 await _connection.UpdateAsync(date);
             }
-
-
-
-
-
-            /*
-            await _connection.UpdateAllAsync<Date>();
-
-
-            await _connection.UpdateAllAsync<Date>(date.CountDown = 1);
-
-
-            await _connection.UpdateAllAsync(date.CountDown = 1);
-
-            foreach (var item in _connection.Table<Date>)
-            {
-
-            }
-            await _connection.UpdateAsync(date.CountDown);
-            */
         }
 
         // Delete

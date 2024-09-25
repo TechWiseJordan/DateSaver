@@ -8,12 +8,15 @@
          Spacing="25">
         <Label Padding="10"
             Margin="10"
-            Text="Welcome to the DB Test Page"
+            Text="Save new date"
+            Style="{StaticResource SubHeadline}"
+            SemanticProperties.HeadingLevel="Level2"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
         <VerticalStackLayout Padding="20" FlexLayout.Basis="400" BackgroundColor="Grey">
             <Entry x:Name="nameEntryField" Placeholder="Name" />
             <Entry x:Name="descriptionEntryField" Placeholder="Description" />
+            <!--<CheckBox x:Name="repeatCheckBox" />-->
             <DatePicker
                 x:Name="dateEntryField"
                 Format="d"

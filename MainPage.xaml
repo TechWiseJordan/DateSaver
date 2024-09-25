@@ -31,11 +31,14 @@
         
         <Button
         x:Name="newBtn"
-        Text="New" 
+        Text="  +  " 
         SemanticProperties.Hint="Adds a new date to be saved"
         Clicked="newBtn_Clicked"
         HorizontalOptions="End"
-        VerticalOptions="End"/>
+        VerticalOptions="End"
+            Padding="20"
+            CornerRadius="175"
+            FontSize="Title"/>
     </Grid>
     
 </ContentPage>

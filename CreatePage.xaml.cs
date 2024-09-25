@@ -12,14 +12,12 @@ public partial class CreatePage : ContentPage
     {
         InitializeComponent();
         _dbService = dbService;
-        //Task.Run(async () => listView.ItemsSource = await _dbService.GetDates());
     }
     
     public CreatePage(LocalDbService dbService, int id)
     {
         InitializeComponent();
         _dbService = dbService;
-        //Task.Run(async () => listView.ItemsSource = await _dbService.GetDates());
 
         _editDateId = id;
 
@@ -34,18 +32,7 @@ public partial class CreatePage : ContentPage
         InitializeComponent();
         _dbService = dbService;
 
-        //_editDateId = id;
         var editDate = (Date)e.Item;
-
-        /*
-        if (_editDateId != 0)
-        {
-            _editDateId = editDate.Id;
-            nameEntryField.Text = editDate.CustomerName;
-            emailEntryField.Text = editDate.Email;
-            mobileEntryField.Text = editDate.Mobile;
-        }
-        */
 
         _editDateId = editDate.Id;
         nameEntryField.Text = editDate.DateName;
@@ -88,10 +75,7 @@ public partial class CreatePage : ContentPage
 
         nameEntryField.Text = string.Empty;
         descriptionEntryField.Text = string.Empty;
-        //dateEntryField.Date = string.Empty;
 
         await Navigation.PushModalAsync(new MainPage(_dbService));
-
-        //listView.ItemsSource = await _dbService.GetDates();
     }
 }
