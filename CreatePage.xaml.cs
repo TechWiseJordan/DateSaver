@@ -36,7 +36,7 @@ public partial class CreatePage : ContentPage
 
         _editDateId = editDate.Id;
         nameEntryField.Text = editDate.DateName;
-        descriptionEntryField.Text = editDate.Description;
+        //descriptionEntryField.Text = editDate.Description;
         dateEntryField.Date = editDate.DateSaved;
     }
 
@@ -54,7 +54,7 @@ public partial class CreatePage : ContentPage
             await _dbService.Create(new Date
             {
                 DateName = nameEntryField.Text,
-                Description = descriptionEntryField.Text,
+                //Description = descriptionEntryField.Text,
                 DateSaved = _editDateSaved
             });
         }
@@ -66,7 +66,7 @@ public partial class CreatePage : ContentPage
             {
                 Id = _editDateId,
                 DateName = nameEntryField.Text,
-                Description = descriptionEntryField.Text,
+                //Description = descriptionEntryField.Text,
                 DateSaved = _editDateSaved
             });
 
@@ -74,7 +74,7 @@ public partial class CreatePage : ContentPage
         }
 
         nameEntryField.Text = string.Empty;
-        descriptionEntryField.Text = string.Empty;
+        //descriptionEntryField.Text = string.Empty;
 
         await Navigation.PushModalAsync(new MainPage(_dbService));
     }

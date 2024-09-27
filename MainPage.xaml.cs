@@ -11,10 +11,26 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         _dbService = dbService;
-        dbService.UpdateCountDown();
+        //dbService.UpdateCountDown();
 
-        Task.Run(async () => listView.ItemsSource = await _dbService.GetDates());
+        //Task.Run(async () => listView.ItemsSource = await _dbService.GetDates());
+
+        CalculateDays();
     }
+
+
+    private async void CalculateDays()
+    {
+        List<Date> resultsFromSQL = await _dbService.GetDates();
+
+        foreach (Date date in resultsFromSQL)
+        {
+            date.CountDown = (date.DateSaved.Date - currentDate.Date).Days;
+        }
+
+        listView.ItemsSource = resultsFromSQL;
+    }
+
 
     private async void newBtn_Clicked(object sender, EventArgs e)
     {

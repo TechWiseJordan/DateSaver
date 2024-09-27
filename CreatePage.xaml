@@ -15,7 +15,7 @@
             HorizontalOptions="Center" />
         <VerticalStackLayout Padding="20" FlexLayout.Basis="400" BackgroundColor="Grey">
             <Entry x:Name="nameEntryField" Placeholder="Name" />
-            <Entry x:Name="descriptionEntryField" Placeholder="Description" />
+            <!--<Entry x:Name="descriptionEntryField" Placeholder="Description" />-->
             <!--<CheckBox x:Name="repeatCheckBox" />-->
             <DatePicker
                 x:Name="dateEntryField"

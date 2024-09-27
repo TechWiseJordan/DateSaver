@@ -29,7 +29,7 @@ namespace DateSaver
         {
             await _connection.InsertAsync(date);
 
-            await UpdateCountDown();
+            //await UpdateCountDown();
         }
 
         // Read
@@ -47,10 +47,11 @@ namespace DateSaver
         {
             await _connection.UpdateAsync(date);
 
-            await UpdateCountDown();
+            //await UpdateCountDown();
         }
 
         // Display number of days until date
+        /*
         public async Task UpdateCountDown()
         {
             List <Date> resultsFromSQL = await _connection.Table<Date>().ToListAsync();
@@ -61,7 +62,7 @@ namespace DateSaver
                 await _connection.UpdateAsync(date);
             }
         }
-
+        */
         // Delete
         public async Task Delete(Date date)
         {
