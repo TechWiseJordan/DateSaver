@@ -1033,6 +1033,7 @@ C:\Users\Droj1\OneDrive\Documents\Programs\DateSaver\obj\Debug\net8.0-android\lp
 C:\Users\Droj1\OneDrive\Documents\Programs\DateSaver\obj\Debug\net8.0-android\lp\158\jl\files.cache
 C:\Users\Droj1\OneDrive\Documents\Programs\DateSaver\obj\Debug\net8.0-android\lp\159\jl\files.cache
 C:\Users\Droj1\OneDrive\Documents\Programs\DateSaver\obj\Debug\net8.0-android\DateSaver.sourcelink.json
+C:\Users\Droj1\OneDrive\Documents\Programs\DateSaver\obj\Debug\net8.0-android\resizetizer\r\drawable\floatingactionpointbutton.png
 C:\Users\Droj1\OneDrive\Documents\Programs\DateSaver\obj\Debug\net8.0-android\android\typemaps.arm64-v8a.ll
 C:\Users\Droj1\OneDrive\Documents\Programs\DateSaver\obj\Debug\net8.0-android\android\environment.arm64-v8a.ll
 C:\Users\Droj1\OneDrive\Documents\Programs\DateSaver\obj\Debug\net8.0-android\android\compressed_assemblies.arm64-v8a.ll

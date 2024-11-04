@@ -4,8 +4,8 @@
              x:Class="DateSaver.MainPage">
 
     <Grid Padding="18">
-        <ScrollView>
-            <VerticalStackLayout Padding="0,0" Spacing="55">
+        <ScrollView VerticalOptions="FillAndExpand">
+            <VerticalStackLayout Padding="0,0" Spacing="55" VerticalOptions="FillAndExpand">
                 <ListView x:Name="listView" FlexLayout.Grow="1" HasUnevenRows="True" ItemTapped="listView_ItemTapped">
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -28,17 +28,41 @@
                 </ListView>
             </VerticalStackLayout>
         </ScrollView>
-        
+        <!--
         <Button
-        x:Name="newBtn"
-        Text="  +  " 
-        SemanticProperties.Hint="Adds a new date to be saved"
-        Clicked="newBtn_Clicked"
-        HorizontalOptions="End"
-        VerticalOptions="End"
+            x:Name="newBtn"
+            Text="  +  " 
+            SemanticProperties.Hint="Adds a new date to be saved"
+            Clicked="newBtn_Clicked"
+            HorizontalOptions="End"
+            VerticalOptions="End"
             Padding="20"
             CornerRadius="175"
-            FontSize="Title"/>
+            FontSize="Title"
+            />
+        -->
+        <StackLayout VerticalOptions="EndAndExpand">
+            <ImageButton
+                x:Name="floatActionPoint2"
+                Source="floatingactionpointbutton.png"
+                SemanticProperties.Hint="Adds a new date to be saved"
+                Clicked="newBtn_Clicked"
+                VerticalOptions="End"
+                HorizontalOptions="EndAndExpand"
+                MaximumWidthRequest="60"
+                Margin="15"
+            />
+        </StackLayout>
+        <!--
+        <Image
+            x:Name="floatActionPoint3"
+            Source="floatingactionpointbutton.png"
+            SemanticProperties.Hint="Adds a new date to be saved"
+            VerticalOptions="End"
+            HorizontalOptions="EndAndExpand"
+            MaximumWidthRequest="60"
+            Margin="15"
+        />
+        -->
     </Grid>
-    
 </ContentPage>

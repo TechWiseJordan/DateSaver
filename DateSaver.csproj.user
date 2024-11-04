@@ -5,7 +5,7 @@
     <ActiveDebugFramework>net8.0-android</ActiveDebugFramework>
     <ActiveDebugProfile>Samsung SM-A520W (Android 8.0 - API 26)</ActiveDebugProfile>
     <SelectedPlatformGroup>PhysicalDevice</SelectedPlatformGroup>
-    <DefaultDevice>Windows Subsystem for Android</DefaultDevice>
+    <DefaultDevice>pixel_2_-_api_26</DefaultDevice>
   </PropertyGroup>
   <ItemGroup>
     <MauiXaml Update="CreatePage.xaml">
