@@ -7,6 +7,13 @@ public partial class MainPage : ContentPage
     private DateTime currentDate = DateTime.Now;
     private int countDown;
 
+
+    public MainPage()
+    {
+        InitializeComponent();
+        CalculateDays();
+    }
+
     public MainPage(LocalDbService dbService)
     {
         InitializeComponent();

@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DateSaver.MainPage">
 
-    <Grid Padding="18">
-        <ScrollView VerticalOptions="FillAndExpand">
-            <VerticalStackLayout Padding="0,0" Spacing="55" VerticalOptions="FillAndExpand">
+    <Grid>
+        <ScrollView VerticalOptions="FillAndExpand" Padding="18,10,18,10">
+            <VerticalStackLayout Padding="0,0,0,0" Spacing="55" VerticalOptions="FillAndExpand">
                 <ListView x:Name="listView" FlexLayout.Grow="1" HasUnevenRows="True" ItemTapped="listView_ItemTapped">
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -41,7 +41,7 @@
             FontSize="Title"
             />
         -->
-        <StackLayout VerticalOptions="EndAndExpand">
+        <StackLayout VerticalOptions="EndAndExpand" Padding="0,0,0,0">
             <ImageButton
                 x:Name="floatActionPoint2"
                 Source="floatingactionpointbutton.png"
@@ -50,19 +50,9 @@
                 VerticalOptions="End"
                 HorizontalOptions="EndAndExpand"
                 MaximumWidthRequest="60"
-                Margin="15"
+                Margin="0,0,25,0"
+                HeightRequest="120"
             />
         </StackLayout>
-        <!--
-        <Image
-            x:Name="floatActionPoint3"
-            Source="floatingactionpointbutton.png"
-            SemanticProperties.Hint="Adds a new date to be saved"
-            VerticalOptions="End"
-            HorizontalOptions="EndAndExpand"
-            MaximumWidthRequest="60"
-            Margin="15"
-        />
-        -->
     </Grid>
 </ContentPage>
