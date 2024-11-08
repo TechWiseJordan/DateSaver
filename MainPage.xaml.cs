@@ -11,20 +11,19 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        CalculateDays();
     }
 
     public MainPage(LocalDbService dbService)
     {
         InitializeComponent();
         _dbService = dbService;
-        //dbService.UpdateCountDown();
-
-        //Task.Run(async () => listView.ItemsSource = await _dbService.GetDates());
-
-        CalculateDays();
     }
 
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        CalculateDays();   
+    }
 
     private async void CalculateDays()
     {
@@ -43,7 +42,6 @@ public partial class MainPage : ContentPage
     {
 
         // Go to create page
-        //await Shell.Current.GoToAsync("CreatePage");
         await Navigation.PushModalAsync(new CreatePage(_dbService, _editDateId));
 
         listView.ItemsSource = await _dbService.GetDates();

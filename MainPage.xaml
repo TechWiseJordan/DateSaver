@@ -28,22 +28,9 @@
                 </ListView>
             </VerticalStackLayout>
         </ScrollView>
-        <!--
-        <Button
-            x:Name="newBtn"
-            Text="  +  " 
-            SemanticProperties.Hint="Adds a new date to be saved"
-            Clicked="newBtn_Clicked"
-            HorizontalOptions="End"
-            VerticalOptions="End"
-            Padding="20"
-            CornerRadius="175"
-            FontSize="Title"
-            />
-        -->
         <StackLayout VerticalOptions="EndAndExpand" Padding="0,0,0,0">
             <ImageButton
-                x:Name="floatActionPoint2"
+                x:Name="floatActionPoint"
                 Source="floatingactionpointbutton.png"
                 SemanticProperties.Hint="Adds a new date to be saved"
                 Clicked="newBtn_Clicked"
