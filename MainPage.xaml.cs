@@ -17,21 +17,39 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         _dbService = dbService;
+        SetupDateListView(); //Hmmm I shouldn't need this here...
     }
 
     protected override void OnAppearing()
     {
         base.OnAppearing();
-        CalculateDays();   
+        SetupDateListView();   
     }
 
-    private async void CalculateDays()
+    private async void SetupDateListView()
     {
         List<Date> resultsFromSQL = await _dbService.GetDates();
 
         foreach (Date date in resultsFromSQL)
         {
+            //Calculate date countdown
             date.CountDown = (date.DateSaved.Date - currentDate.Date).Days;
+
+            //Check if date needs to be repeated
+            if (date.CountDown < 0 && date.RepeatDate == true) 
+            {
+                await _dbService.Update(new Date
+                {
+                    Id = date.Id,
+                    DateName = date.DateName,
+                    //Description = date.Description,
+                    DateSaved = date.DateSaved.AddYears(1),
+                    RepeatDate = date.RepeatDate
+                });
+
+                //Recalculate date countdown
+                date.CountDown = (date.DateSaved.Date - currentDate.Date).Days;
+            }
         }
 
         listView.ItemsSource = resultsFromSQL;

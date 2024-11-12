@@ -38,6 +38,7 @@ public partial class CreatePage : ContentPage
         nameEntryField.Text = editDate.DateName;
         //descriptionEntryField.Text = editDate.Description;
         dateEntryField.Date = editDate.DateSaved;
+        repeatCheckBox.IsChecked = editDate.RepeatDate;
     }
 
     private void DateSelected(object sender, DateChangedEventArgs e)
@@ -55,7 +56,8 @@ public partial class CreatePage : ContentPage
             {
                 DateName = nameEntryField.Text,
                 //Description = descriptionEntryField.Text,
-                DateSaved = _editDateSaved
+                DateSaved = _editDateSaved, 
+                RepeatDate = repeatCheckBox.IsChecked               
             });
         }
         else
@@ -67,7 +69,8 @@ public partial class CreatePage : ContentPage
                 Id = _editDateId,
                 DateName = nameEntryField.Text,
                 //Description = descriptionEntryField.Text,
-                DateSaved = _editDateSaved
+                DateSaved = _editDateSaved,
+                RepeatDate = repeatCheckBox.IsChecked
             });
 
             _editDateId = 0;

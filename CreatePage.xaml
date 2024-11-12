@@ -12,17 +12,37 @@
             Style="{StaticResource SubHeadline}"
             SemanticProperties.HeadingLevel="Level2"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center" 
+        />
         <VerticalStackLayout Padding="20" FlexLayout.Basis="400" BackgroundColor="Grey">
-            <Entry x:Name="nameEntryField" Placeholder="Name" />
-            <!--<Entry x:Name="descriptionEntryField" Placeholder="Description" />-->
-            <!--<CheckBox x:Name="repeatCheckBox" />-->
+            <Entry 
+                x:Name="nameEntryField" 
+                Placeholder="Name" 
+            />
+            <!--
+            <Entry 
+                x:Name="descriptionEntryField" 
+                Placeholder="Description" 
+            />
+            -->
             <DatePicker
                 x:Name="dateEntryField"
                 Format="d"
                 MinimumDate="01/01/1900"
                 DateSelected="DateSelected"
             />
+            <Grid>
+                <Label
+                    Text="Repeat?" 
+                    VerticalOptions="CenterAndExpand"
+                />
+                <CheckBox 
+                    x:Name="repeatCheckBox" 
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="Start"
+                    Margin="50,0,0,0"
+                />
+            </Grid>
             <Button x:Name="saveBtn" Text="Save" Clicked="saveBtn_Clicked" />
         </VerticalStackLayout>
     </VerticalStackLayout>

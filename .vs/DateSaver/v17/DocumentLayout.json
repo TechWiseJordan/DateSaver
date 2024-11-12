@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\createpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|solutionrelative:createpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|solutionrelative:mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\createpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|solutionrelative:createpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\localdbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|solutionrelative:localdbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|c:\\users\\droj1\\onedrive\\documents\\programs\\datesaver\\createpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|solutionrelative:createpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\date.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|solutionrelative:date.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|solutionrelative:mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|c:\\users\\droj1\\onedrive\\documents\\programs\\datesaver\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|solutionrelative:mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\localdbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|solutionrelative:localdbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
@@ -54,25 +54,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "LocalDbService.cs",
               "DocumentMoniker": "C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\LocalDbService.cs",
               "RelativeDocumentMoniker": "LocalDbService.cs",
               "ToolTip": "C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\LocalDbService.cs",
               "RelativeToolTip": "LocalDbService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC8AAAAYAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwC8AAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T17:11:36.887Z"
+              "WhenOpened": "2024-09-23T17:11:36.887Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "CreatePage.xaml",
               "DocumentMoniker": "C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\CreatePage.xaml",
               "RelativeDocumentMoniker": "CreatePage.xaml",
               "ToolTip": "C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\CreatePage.xaml",
               "RelativeToolTip": "CreatePage.xaml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABVAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAABoAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-09-18T20:28:21.767Z",
               "EditorCaption": ""
@@ -85,14 +86,14 @@
               "RelativeDocumentMoniker": "CreatePage.xaml.cs",
               "ToolTip": "C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\CreatePage.xaml.cs",
               "RelativeToolTip": "CreatePage.xaml.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAA9wE4AAAAkAAAA",
+              "ViewState": "AQIAADEAAAAAAAAAAAAcwEkAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-18T20:45:11.572Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Date.cs",
               "DocumentMoniker": "C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\Date.cs",
               "RelativeDocumentMoniker": "Date.cs",
@@ -105,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\MainPage.xaml",
               "RelativeDocumentMoniker": "MainPage.xaml",
@@ -113,18 +114,17 @@
               "RelativeToolTip": "MainPage.xaml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-09-13T18:39:22.072Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-13T18:39:22.072Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "MainPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\MainPage.xaml.cs",
               "RelativeDocumentMoniker": "MainPage.xaml.cs",
               "ToolTip": "C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\MainPage.xaml.cs",
               "RelativeToolTip": "MainPage.xaml.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAQwB0AAAAZAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQwBMAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-13T18:39:23.371Z",
               "EditorCaption": ""
