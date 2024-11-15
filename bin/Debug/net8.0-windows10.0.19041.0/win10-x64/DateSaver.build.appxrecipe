@@ -214,6 +214,9 @@
     <AppxPackagedFile Include="C:\Users\Droj1\OneDrive\Documents\Programs\DateSaver\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Droj1\OneDrive\Documents\Programs\DateSaver\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\floatingactionpointbutton.scale-100.png">
+      <PackagePath>floatingactionpointbutton.scale-100.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Droj1\OneDrive\Documents\Programs\DateSaver\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\DateSaver.deps.json">
       <PackagePath>DateSaver.deps.json</PackagePath>
     </AppxPackagedFile>

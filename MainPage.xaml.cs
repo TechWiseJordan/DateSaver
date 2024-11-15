@@ -17,7 +17,6 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         _dbService = dbService;
-        SetupDateListView(); //Hmmm I shouldn't need this here...
     }
 
     protected override void OnAppearing()
@@ -81,7 +80,7 @@ public partial class MainPage : ContentPage
             case "Delete":
 
                 await _dbService.Delete(date);
-                listView.ItemsSource = await _dbService.GetDates();
+                SetupDateListView();
 
                 break;
         }

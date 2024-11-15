@@ -315,3 +315,4 @@ C:\Users\Droj1\OneDrive\Documents\Programs\DateSaver\obj\Debug\net8.0-ios\iossim
 C:\Users\Droj1\OneDrive\Documents\Programs\DateSaver\obj\Debug\net8.0-ios\iossimulator-x64\DateSaver.pdb
 C:\Users\Droj1\OneDrive\Documents\Programs\DateSaver\obj\Debug\net8.0-ios\iossimulator-x64\DateSaver.genruntimeconfig.cache
 C:\Users\Droj1\OneDrive\Documents\Programs\DateSaver\obj\Debug\net8.0-ios\iossimulator-x64\ref\DateSaver.dll
+C:\Users\Droj1\OneDrive\Documents\Programs\DateSaver\obj\Debug\net8.0-ios\iossimulator-x64\resizetizer\r\Resources\floatingactionpointbutton.png

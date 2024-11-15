@@ -304,3 +304,4 @@ C:\Users\Droj1\OneDrive\Documents\Programs\DateSaver\obj\Debug\net8.0-maccatalys
 C:\Users\Droj1\OneDrive\Documents\Programs\DateSaver\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\DateSaver.pdb
 C:\Users\Droj1\OneDrive\Documents\Programs\DateSaver\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\DateSaver.genruntimeconfig.cache
 C:\Users\Droj1\OneDrive\Documents\Programs\DateSaver\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\ref\DateSaver.dll
+C:\Users\Droj1\OneDrive\Documents\Programs\DateSaver\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\floatingactionpointbutton.png
