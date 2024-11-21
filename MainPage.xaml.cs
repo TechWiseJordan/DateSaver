@@ -22,33 +22,50 @@ public partial class MainPage : ContentPage
     protected override void OnAppearing()
     {
         base.OnAppearing();
-        SetupDateListView();   
+        SetupDateListView();
     }
 
-    private async void SetupDateListView()
+    public async void SetupDateListView()
     {
         List<Date> resultsFromSQL = await _dbService.GetDates();
+
 
         foreach (Date date in resultsFromSQL)
         {
             //Calculate date countdown
             date.CountDown = (date.DateSaved.Date - currentDate.Date).Days;
 
+        }
+
+        foreach (Date date in resultsFromSQL)
+        {
             //Check if date needs to be repeated
-            if (date.CountDown < 0 && date.RepeatDate == true) 
+            if (date.CountDown < 0 && date.RepeatDate == true) // <-- CountDown is always ZERO here stupid
             {
+                while (date.DateSaved.Year <= currentDate.Year)
+                    {
+                        date.DateSaved = date.DateSaved.AddYears(1);
+                    }
+
                 await _dbService.Update(new Date
                 {
                     Id = date.Id,
                     DateName = date.DateName,
                     //Description = date.Description,
-                    DateSaved = date.DateSaved.AddYears(1),
+                    //DateSaved = date.DateSaved.AddYears(1),
+                    DateSaved = date.DateSaved,
                     RepeatDate = date.RepeatDate
                 });
 
-                //Recalculate date countdown
-                date.CountDown = (date.DateSaved.Date - currentDate.Date).Days;
+                //await DisplayAlert("Test 1", date.DateName + "'s Date is currently: " + date.DateSaved.Date, "Close");
             }
+        }
+
+        foreach (Date date in resultsFromSQL)
+        {
+            //Calculate date countdown
+            date.CountDown = (date.DateSaved.Date - currentDate.Date).Days;
+
         }
 
         listView.ItemsSource = resultsFromSQL;
