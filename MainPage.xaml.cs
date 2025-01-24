@@ -42,7 +42,7 @@ public partial class MainPage : ContentPage
             //Check if date needs to be repeated
             if (date.CountDown < 0 && date.RepeatDate == true) // <-- CountDown is always ZERO here stupid
             {
-                while (date.DateSaved.Year <= currentDate.Year)
+                while (date.DateSaved <= currentDate)
                     {
                         date.DateSaved = date.DateSaved.AddYears(1);
                     }
