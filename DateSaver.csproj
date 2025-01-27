@@ -40,13 +40,14 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-    <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" ForegroundScale="0.75" Color="#512BD4" />
+    <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" ForegroundScale="0.50" Color="#512BD4" />
 
     <!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#5c5c5c" BaseSize="128,128" />
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#444444" BaseSize="128,128" />
 		<!--<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#5c5c5c" BaseSize="128,128" />-->
     
     <!-- Attribution  -->
+    <!--<a href="https://www.flaticon.com/free-icons/recovery" title="recovery icons">Recovery icons created by Smashicons - Flaticon</a>-->
     <!--<a href="https://www.flaticon.com/free-icons/pickaxe" title="pickaxe icons">Pickaxe icons created by Freepik - Flaticon</a>-->
     <!--<a href="https://www.flaticon.com/free-icons/mage" title="mage icons">Mage icons created by Maan Icons - Flaticon</a>-->
 

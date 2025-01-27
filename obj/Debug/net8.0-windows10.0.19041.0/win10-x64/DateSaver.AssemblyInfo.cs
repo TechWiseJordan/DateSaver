@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DateSaver")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+3e202682e64e45b992498a035fce0d8a43fa4ec2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+6e4ff0aeb3f0438a3da878096c467230e3273e22")]
 [assembly: System.Reflection.AssemblyProductAttribute("DateSaver")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DateSaver")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
