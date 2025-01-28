@@ -27,48 +27,55 @@ public partial class MainPage : ContentPage
 
     public async void SetupDateListView()
     {
-        List<Date> resultsFromSQL = await _dbService.GetDates();
-
-
-        foreach (Date date in resultsFromSQL)
+        try
         {
-            //Calculate date countdown
-            date.CountDown = (date.DateSaved.Date - currentDate.Date).Days;
+            List<Date> resultsFromSQL = await _dbService.GetDates();
 
-        }
 
-        foreach (Date date in resultsFromSQL)
-        {
-            //Check if date needs to be repeated
-            if (date.CountDown < 0 && date.RepeatDate == true) // <-- CountDown is always ZERO here stupid
+            foreach (Date date in resultsFromSQL)
             {
-                while (date.DateSaved <= currentDate)
+                // Calculate date countdown
+                date.CountDown = (date.DateSaved.Date - currentDate.Date).Days;
+            }
+
+            foreach (Date date in resultsFromSQL)
+            {
+                // Check if date needs to be repeated
+                if (date.CountDown < 0 && date.RepeatDate == true) // <-- CountDown is always ZERO here stupid
+                {
+                    while (date.DateSaved <= currentDate)
                     {
                         date.DateSaved = date.DateSaved.AddYears(1);
                     }
 
-                await _dbService.Update(new Date
-                {
-                    Id = date.Id,
-                    DateName = date.DateName,
-                    //Description = date.Description,
-                    //DateSaved = date.DateSaved.AddYears(1),
-                    DateSaved = date.DateSaved,
-                    RepeatDate = date.RepeatDate
-                });
+                    await _dbService.Update(new Date
+                    {
+                        Id = date.Id,
+                        DateName = date.DateName,
+                        //Description = date.Description,
+                        //DateSaved = date.DateSaved.AddYears(1),
+                        DateSaved = date.DateSaved,
+                        RepeatDate = date.RepeatDate
+                    });
 
-                //await DisplayAlert("Test 1", date.DateName + "'s Date is currently: " + date.DateSaved.Date, "Close");
+                    //await DisplayAlert("Test 1", date.DateName + "'s Date is currently: " + date.DateSaved.Date, "Close");
+                }
             }
-        }
 
-        foreach (Date date in resultsFromSQL)
+            // This recalculates the countdown and should really by done in the foreach above
+            foreach (Date date in resultsFromSQL)
+            {
+                // Calculate date countdown
+                date.CountDown = (date.DateSaved.Date - currentDate.Date).Days;
+            }
+
+            listView.ItemsSource = resultsFromSQL;
+        }
+        catch (Exception e)
         {
-            //Calculate date countdown
-            date.CountDown = (date.DateSaved.Date - currentDate.Date).Days;
-
+            //  Block of code to handle errors
+            Console.WriteLine(e.Message);
         }
-
-        listView.ItemsSource = resultsFromSQL;
     }
 
 
