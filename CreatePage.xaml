@@ -8,23 +8,17 @@
          Spacing="25">
         <Label Padding="10"
             Margin="10"
-            Text="Save new date"
+            Text="Save, Edit, or Delete Dates"
             Style="{StaticResource SubHeadline}"
             SemanticProperties.HeadingLevel="Level2"
             VerticalOptions="Center" 
             HorizontalOptions="Center" 
         />
-        <VerticalStackLayout Padding="20" FlexLayout.Basis="400" BackgroundColor="Grey">
+        <VerticalStackLayout Padding="20" FlexLayout.Basis="400">
             <Entry 
                 x:Name="nameEntryField" 
                 Placeholder="Name" 
             />
-            <!--
-            <Entry 
-                x:Name="descriptionEntryField" 
-                Placeholder="Description" 
-            />
-            -->
             <DatePicker
                 x:Name="dateEntryField"
                 Format="d"
@@ -43,7 +37,8 @@
                     Margin="50,0,0,0"
                 />
             </Grid>
-            <Button x:Name="saveBtn" Text="Save" Clicked="saveBtn_Clicked" />
+            <Button x:Name="saveBtn" Text="Save" Clicked="saveBtn_Clicked" Margin="0,20,0,0"/>
+            <Button x:Name="deleteBtn" Text="Delete" Clicked="deleteBtn_Clicked" Margin="0,20,0,0"/>
         </VerticalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

@@ -5,7 +5,7 @@ namespace DateSaver;
 public partial class CreatePage : ContentPage
 {
     private readonly LocalDbService _dbService;
-    private int _editDateId;
+    private int _editDateId = 0;
     private DateTime _editDateSaved = DateTime.Today.Date;
 
     public CreatePage(LocalDbService dbService) // Default constuctor which should NOT be called
@@ -20,11 +20,6 @@ public partial class CreatePage : ContentPage
         _dbService = dbService;
 
         _editDateId = id;
-
-        if (_editDateId != 0)
-        {
-
-        }
     }
     
     public CreatePage(LocalDbService dbService, int id, ItemTappedEventArgs e)
@@ -36,7 +31,6 @@ public partial class CreatePage : ContentPage
 
         _editDateId = editDate.Id;
         nameEntryField.Text = editDate.DateName;
-        //descriptionEntryField.Text = editDate.Description;
         dateEntryField.Date = editDate.DateSaved;
         repeatCheckBox.IsChecked = editDate.RepeatDate;
     }
@@ -55,7 +49,6 @@ public partial class CreatePage : ContentPage
             await _dbService.Create(new Date
             {
                 DateName = nameEntryField.Text,
-                //Description = descriptionEntryField.Text,
                 DateSaved = _editDateSaved, 
                 RepeatDate = repeatCheckBox.IsChecked               
             });
@@ -68,17 +61,28 @@ public partial class CreatePage : ContentPage
             {
                 Id = _editDateId,
                 DateName = nameEntryField.Text,
-                //Description = descriptionEntryField.Text,
                 DateSaved = _editDateSaved,
                 RepeatDate = repeatCheckBox.IsChecked
             });
 
             _editDateId = 0;
         }
-
-        nameEntryField.Text = string.Empty;
-        //descriptionEntryField.Text = string.Empty;
-
         await Navigation.PushModalAsync(new MainPage(_dbService));
+    }
+
+    private async void deleteBtn_Clicked(object sender, EventArgs e)
+    {
+        if (_editDateId == 0) // Go home
+        {
+            await Navigation.PushModalAsync(new MainPage(_dbService));
+        }
+        else // Delete then go home
+        {
+            Date deleteDate = await _dbService.GetById(_editDateId);
+
+            await _dbService.Delete(deleteDate);
+
+            await Navigation.PushModalAsync(new MainPage(_dbService));
+        }
     }
 }

@@ -53,7 +53,6 @@ public partial class MainPage : ContentPage
                         Id = date.Id,
                         DateName = date.DateName,
                         //Description = date.Description,
-                        //DateSaved = date.DateSaved.AddYears(1),
                         DateSaved = date.DateSaved,
                         RepeatDate = date.RepeatDate
                     });
@@ -73,7 +72,6 @@ public partial class MainPage : ContentPage
         }
         catch (Exception e)
         {
-            //  Block of code to handle errors
             Console.WriteLine(e.Message);
         }
     }
@@ -81,8 +79,7 @@ public partial class MainPage : ContentPage
 
     private async void newBtn_Clicked(object sender, EventArgs e)
     {
-
-        // Go to create page
+        // Go to create page with no data
         await Navigation.PushModalAsync(new CreatePage(_dbService, _editDateId));
 
         listView.ItemsSource = await _dbService.GetDates();
@@ -90,23 +87,7 @@ public partial class MainPage : ContentPage
 
     private async void listView_ItemTapped(object sender, ItemTappedEventArgs e)
     {
-        var date = (Date)e.Item;
-        countDown = (date.DateSaved.Date - currentDate.Date).Days;
-        var action = await DisplayActionSheet("Action", "Cancel", null, "Edit", "Delete");
-
-        switch (action)
-        {
-            case "Edit":
-
-                await Navigation.PushModalAsync(new CreatePage(_dbService, _editDateId, e));
-
-                break;
-            case "Delete":
-
-                await _dbService.Delete(date);
-                SetupDateListView();
-
-                break;
-        }
+        // Go to create page with data
+        await Navigation.PushModalAsync(new CreatePage(_dbService, _editDateId, e));
     }
 }
