@@ -1,4 +1,6 @@
-﻿namespace DateSaver;
+﻿using System.Linq;
+
+namespace DateSaver;
 
 public partial class MainPage : ContentPage
 {
@@ -67,6 +69,11 @@ public partial class MainPage : ContentPage
                 // Calculate date countdown
                 date.CountDown = (date.DateSaved.Date - currentDate.Date).Days;
             }
+
+            //resultsFromSQL.OrderBy();
+            //resultsFromSQL.Order();   // This one doesn't seem to do anything
+            //resultsFromSQL.Sort();    // This one makes the list not display
+            resultsFromSQL.Sort((x, y) => DateTime.Compare(x.DateSaved, y.DateSaved));
 
             listView.ItemsSource = resultsFromSQL;
         }
