@@ -97,4 +97,9 @@ public partial class MainPage : ContentPage
         // Go to create page with data
         await Navigation.PushModalAsync(new CreatePage(_dbService, _editDateId, e));
     }
+
+    private void creditsBtn_Clicked(object sender, EventArgs e)
+    {
+        DisplayAlert("Test 1","Does this button work now?", "Close");
+    }
 }
