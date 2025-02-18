@@ -30,6 +30,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = DateSaver.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
+[C:/Users/Droj1/OneDrive/Documents/Programs/DateSaver/AttributionPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = DateSaver.AttributionPage.xaml
+build_metadata.AdditionalFiles.TargetPath = AttributionPage.xaml
+build_metadata.AdditionalFiles.RelativePath = AttributionPage.xaml
+
 [C:/Users/Droj1/OneDrive/Documents/Programs/DateSaver/CreatePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = DateSaver.CreatePage.xaml

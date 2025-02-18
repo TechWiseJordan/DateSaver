@@ -98,8 +98,8 @@ public partial class MainPage : ContentPage
         await Navigation.PushModalAsync(new CreatePage(_dbService, _editDateId, e));
     }
 
-    private void creditsBtn_Clicked(object sender, EventArgs e)
+    private async void creditsBtn_Clicked(object sender, EventArgs e)
     {
-        DisplayAlert("Test 1","Does this button work now?", "Close");
+        await Navigation.PushModalAsync(new AttributionPage());
     }
 }

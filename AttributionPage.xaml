@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DateSaver.AttributionPage">
+    <Grid>
+        <ScrollView VerticalOptions="FillAndExpand" Padding="18,60,18,10">
+            <VerticalStackLayout Padding="0,0,0,0" Spacing="55" VerticalOptions="FillAndExpand">
+                <Label Padding="0,0,0,0"
+                    HorizontalTextAlignment="Start"
+                    LineBreakMode="CharacterWrap"
+                    FontSize="Body"
+                    Text="App copyright - Jordan Sommer 2025"
+                />
+                <Label Padding="0,0,0,0"
+                    HorizontalTextAlignment="Start"
+                    LineBreakMode="CharacterWrap"
+                    FontSize="Body"
+                    Text="Pickaxe icons created by Freepik - Flaticon
+                   https:// www.flaticon.com/free-icons/pickaxe"
+                />
+                <Label Padding="0,0,0,0"
+                    HorizontalTextAlignment="Start"
+                    FontSize="Body"
+                    Text="Mage icons created by Maan Icons - Flaticon &#10;https://www.flaticon.com/free-icons/mage"
+                />
+                <Label Padding="0,0,0,0"
+                    HorizontalTextAlignment="Start"
+                    FontSize="Body"
+                    Text="Recovery icons created by Smashicons - Flaticon &#10;https://www.flaticon.com/free-icons/recovery"
+                />
+            </VerticalStackLayout>
+        </ScrollView>
+        <StackLayout BackgroundColor="Black" VerticalOptions="Start" Padding="0,0,0,0">
+            <Label 
+            Text="Copyrights"
+            FontSize="Title"
+            Margin="15,13,15,7"
+            VerticalOptions="Start"
+            HorizontalOptions="Start"
+            />
+            <!--
+            <ImageButton
+            x:Name="newBtn"
+            Source="add_image.png"
+            SemanticProperties.Hint="Adds a new date to be saved"
+            Clicked="newBtn_Clicked"
+            VerticalOptions="Start"
+            HorizontalOptions="End"
+            MaximumWidthRequest="60"
+            Margin="0,-70,15,0"
+            Padding="10,0,10,-20"
+            />
+
+            <ImageButton
+            x:Name="creditsBtn"
+            Source="more_vert_image.png"
+            SemanticProperties.Hint="Moves to the credits page"
+            Clicked="creditsBtn_Clicked"
+            VerticalOptions="Start"
+            HorizontalOptions="End"
+            MaximumWidthRequest="55"
+            Margin="0,-76,60,0"
+            Padding="10,0,10,-20"
+            /> 
+            -->
+        </StackLayout>
+    </Grid>
+</ContentPage>
