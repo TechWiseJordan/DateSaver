@@ -64,7 +64,7 @@
               "RelativeDocumentMoniker": "AttributionPage.xaml",
               "ToolTip": "C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\AttributionPage.xaml*",
               "RelativeToolTip": "AttributionPage.xaml*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAB1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-02-18T21:52:02.103Z",
               "EditorCaption": ""
@@ -79,8 +79,7 @@
               "RelativeToolTip": "AttributionPage.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T21:52:18.166Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T21:52:18.166Z"
             },
             {
               "$type": "Document",
@@ -92,8 +91,7 @@
               "RelativeToolTip": "AppShell.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-07T19:30:40.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-07T19:30:40.595Z"
             },
             {
               "$type": "Document",
@@ -101,12 +99,11 @@
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\MainPage.xaml",
               "RelativeDocumentMoniker": "MainPage.xaml",
-              "ToolTip": "C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\MainPage.xaml*",
-              "RelativeToolTip": "MainPage.xaml*",
+              "ToolTip": "C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\MainPage.xaml",
+              "RelativeToolTip": "MainPage.xaml",
               "ViewState": "AgIAABIAAAAAAAAAAAAAAB8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-07T18:30:49.037Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-07T18:30:49.037Z"
             },
             {
               "$type": "Document",
@@ -118,8 +115,7 @@
               "RelativeToolTip": "MainPage.xaml.cs",
               "ViewState": "AgIAAFAAAAAAAAAAAAAIwFsAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T18:39:23.371Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-13T18:39:23.371Z"
             },
             {
               "$type": "Document",
