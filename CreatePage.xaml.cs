@@ -20,6 +20,9 @@ public partial class CreatePage : ContentPage
         _dbService = dbService;
 
         _editDateId = id;
+
+        titleLbl.Text = "Save Date";
+        deleteBtn.Text = "Cancel";
     }
     
     public CreatePage(LocalDbService dbService, int id, ItemTappedEventArgs e)
@@ -33,6 +36,9 @@ public partial class CreatePage : ContentPage
         nameEntryField.Text = editDate.DateName;
         dateEntryField.Date = editDate.DateSaved;
         repeatCheckBox.IsChecked = editDate.RepeatDate;
+
+        titleLbl.Text = "Edit or Delete Date";
+        deleteBtn.Text = "Delete";
     }
 
     private void DateSelected(object sender, DateChangedEventArgs e)
@@ -84,5 +90,10 @@ public partial class CreatePage : ContentPage
 
             await Navigation.PushModalAsync(new MainPage(_dbService));
         }
+    }
+
+    private async void backBtn_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushModalAsync(new MainPage(_dbService));
     }
 }

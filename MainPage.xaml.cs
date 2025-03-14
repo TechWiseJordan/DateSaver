@@ -100,6 +100,6 @@ public partial class MainPage : ContentPage
 
     private async void creditsBtn_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushModalAsync(new AttributionPage());
+        await Navigation.PushModalAsync(new AttributionPage(_dbService));
     }
 }

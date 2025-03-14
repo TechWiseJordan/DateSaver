@@ -1058,3 +1058,5 @@ C:\Users\Droj1\OneDrive\Documents\Programs\DateSaver\obj\Debug\net8.0-android\st
 C:\Users\Droj1\OneDrive\Documents\Programs\DateSaver\obj\Debug\net8.0-android\stamp\_GenerateJavaStubs.stamp
 C:\Users\Droj1\OneDrive\Documents\Programs\DateSaver\obj\Debug\net8.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Droj1\OneDrive\Documents\Programs\DateSaver\obj\Debug\net8.0-android\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Droj1\OneDrive\Documents\Programs\DateSaver\obj\Debug\net8.0-android\android\src\crc6452ffdc5b34af3a0f\MauiLayerDrawable.java
+C:\Users\Droj1\OneDrive\Documents\Programs\DateSaver\obj\Debug\net8.0-android\resizetizer\r\drawable\arrow_back.png

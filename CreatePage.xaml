@@ -3,6 +3,114 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DateSaver.CreatePage"
              Title="CreatePage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="80"/>
+        </Grid.ColumnDefinitions>
+        
+        <!--Row 0-->
+        <BoxView 
+            Grid.Row="0"
+            Grid.ColumnSpan="2"
+            Color="Black" 
+            />
+        <Label 
+            Grid.Row="0"
+            Grid.Column="0"
+            x:Name="titleLbl"
+            Text="Save, Edit, or Delete Dates"
+            HorizontalOptions="Start"
+            VerticalOptions="Center" 
+            FontSize="Title"
+            Padding="20,0,0,0"
+            />
+        <ImageButton
+            Grid.Row="0"
+            Grid.Column="1"
+            x:Name="backBtn"
+            Source="arrow_back.png"
+            SemanticProperties.Hint="Returns to the main page"
+            Clicked="backBtn_Clicked"
+            VerticalOptions="Start"
+            HorizontalOptions="End"
+            Margin="0,0,20,0"
+            Padding="15,15,5,15"
+            />
+
+        <!--Row 1-->
+        <Entry 
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            x:Name="nameEntryField" 
+            Placeholder="Name"     
+            FontSize="20"
+            Margin="25,15,25,15"
+            />
+
+        <!--Row 2-->
+        <DatePicker
+            Grid.Row="2"
+            Grid.ColumnSpan="2"
+            x:Name="dateEntryField"
+            Format="d"
+            MinimumDate="01/01/1900"
+            FontSize="20"
+            DateSelected="DateSelected"
+            Margin="25,0,25,15"
+            />
+
+        <!--Row 3-->
+        <Label
+            Grid.Row="3"
+            Grid.Column="0"
+            Text="Repeat?" 
+            FontSize="20"
+            Margin="30,0,0,0"
+            />
+        <CheckBox 
+            Grid.Row="3"
+            Grid.Column="0"
+            x:Name="repeatCheckBox" 
+            HorizontalOptions="Start"
+            Margin="100,0,0,30"
+            />
+
+        <!--Row 4-->
+        <Button 
+            Grid.Row="4"
+            Grid.ColumnSpan="2"
+            x:Name="saveBtn" 
+            Text="Save" 
+            FontSize="20"
+            Clicked="saveBtn_Clicked" 
+            Margin="25,0,25,25"
+            HeightRequest="60"
+            VerticalOptions="Start"
+            />
+        <Button 
+            Grid.Row="4"
+            Grid.ColumnSpan="2"
+            x:Name="deleteBtn" 
+            Text="Delete" 
+            FontSize="20"
+            Clicked="deleteBtn_Clicked" 
+            Margin="25,75,25,25"
+            HeightRequest="60"
+            VerticalOptions="Start"
+            />
+    </Grid>
+
+
+<!--
     <VerticalStackLayout 
          Padding="0,0"
          Spacing="25">
@@ -16,6 +124,8 @@
         />
         <VerticalStackLayout Padding="20" FlexLayout.Basis="400">
             <Entry 
+                Grid.Row="1"
+                Grid.ColumnSpan="2"
                 x:Name="nameEntryField" 
                 Placeholder="Name" 
             />
@@ -41,4 +151,5 @@
             <Button x:Name="deleteBtn" Text="Delete" Clicked="deleteBtn_Clicked" Margin="0,20,0,0"/>
         </VerticalStackLayout>
     </VerticalStackLayout>
+    -->
 </ContentPage>

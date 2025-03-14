@@ -61,7 +61,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0-android34.0": {
@@ -73,16 +73,16 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.83, )"
+              "version": "[8.0.100, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.83, )"
+              "version": "[8.0.100, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.11, )",
+              "version": "[8.0.13, )",
               "autoReferenced": true
             },
             "SQLitePCLRaw.bundle_green": {
@@ -108,23 +108,23 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.Android.Ref.34",
-              "version": "[34.0.145, 34.0.145]"
+              "version": "[34.0.147, 34.0.147]"
             },
             {
               "name": "Microsoft.Android.Runtime.34.android-arm",
-              "version": "[34.0.145, 34.0.145]"
+              "version": "[34.0.147, 34.0.147]"
             },
             {
               "name": "Microsoft.Android.Runtime.34.android-arm64",
-              "version": "[34.0.145, 34.0.145]"
+              "version": "[34.0.147, 34.0.147]"
             },
             {
               "name": "Microsoft.Android.Runtime.34.android-x64",
-              "version": "[34.0.145, 34.0.145]"
+              "version": "[34.0.147, 34.0.147]"
             },
             {
               "name": "Microsoft.Android.Runtime.34.android-x86",
-              "version": "[34.0.145, 34.0.145]"
+              "version": "[34.0.147, 34.0.147]"
             }
           ],
           "frameworkReferences": {
@@ -135,7 +135,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         },
         "net8.0-ios18.0": {
           "targetAlias": "net8.0-ios",
@@ -146,16 +146,16 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.83, )"
+              "version": "[8.0.100, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.83, )"
+              "version": "[8.0.100, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.11, )",
+              "version": "[8.0.13, )",
               "autoReferenced": true
             },
             "SQLitePCLRaw.bundle_green": {
@@ -181,11 +181,11 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.iOS.Ref.net8.0_18.0",
-              "version": "[18.0.8316, 18.0.8316]"
+              "version": "[18.0.8319, 18.0.8319]"
             },
             {
               "name": "Microsoft.iOS.Runtime.iossimulator-x64.net8.0_18.0",
-              "version": "[18.0.8316, 18.0.8316]"
+              "version": "[18.0.8319, 18.0.8319]"
             }
           ],
           "frameworkReferences": {
@@ -196,7 +196,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         },
         "net8.0-maccatalyst18.0": {
           "targetAlias": "net8.0-maccatalyst",
@@ -207,16 +207,16 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.83, )"
+              "version": "[8.0.100, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.83, )"
+              "version": "[8.0.100, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.11, )",
+              "version": "[8.0.13, )",
               "autoReferenced": true
             },
             "SQLitePCLRaw.bundle_green": {
@@ -243,11 +243,11 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.MacCatalyst.Ref.net8.0_18.0",
-              "version": "[18.0.8316, 18.0.8316]"
+              "version": "[18.0.8319, 18.0.8319]"
             },
             {
               "name": "Microsoft.MacCatalyst.Runtime.maccatalyst-x64.net8.0_18.0",
-              "version": "[18.0.8316, 18.0.8316]"
+              "version": "[18.0.8319, 18.0.8319]"
             }
           ],
           "frameworkReferences": {
@@ -258,7 +258,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         },
         "net8.0-windows10.0.19041": {
           "targetAlias": "net8.0-windows10.0.19041.0",
@@ -269,11 +269,11 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.83, )"
+              "version": "[8.0.100, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.83, )"
+              "version": "[8.0.100, )"
             },
             "SQLitePCLRaw.bundle_green": {
               "target": "Package",
@@ -298,7 +298,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.Windows.SDK.NET.Ref",
-              "version": "[10.0.19041.54, 10.0.19041.54]"
+              "version": "[10.0.19041.57, 10.0.19041.57]"
             }
           ],
           "frameworkReferences": {
@@ -309,7 +309,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
