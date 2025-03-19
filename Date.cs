@@ -11,6 +11,7 @@ namespace DateSaver
         [Column("id")]
         public int Id { get; set; }
 
+        [AllowNull]
         [Column("date_name")]
         public string DateName { get; set; }
 

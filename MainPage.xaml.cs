@@ -7,13 +7,7 @@ public partial class MainPage : ContentPage
     private readonly LocalDbService _dbService;
     private int _editDateId;
     private DateTime currentDate = DateTime.Now;
-    private int countDown;
 
-
-    public MainPage()
-    {
-        InitializeComponent();
-    }
 
     public MainPage(LocalDbService dbService)
     {
@@ -54,12 +48,9 @@ public partial class MainPage : ContentPage
                     {
                         Id = date.Id,
                         DateName = date.DateName,
-                        //Description = date.Description,
                         DateSaved = date.DateSaved,
                         RepeatDate = date.RepeatDate
                     });
-
-                    //await DisplayAlert("Test 1", date.DateName + "'s Date is currently: " + date.DateSaved.Date, "Close");
                 }
             }
 
@@ -70,9 +61,6 @@ public partial class MainPage : ContentPage
                 date.CountDown = (date.DateSaved.Date - currentDate.Date).Days;
             }
 
-            //resultsFromSQL.OrderBy();
-            //resultsFromSQL.Order();   // This one doesn't seem to do anything
-            //resultsFromSQL.Sort();    // This one makes the list not display
             resultsFromSQL.Sort((x, y) => DateTime.Compare(x.DateSaved, y.DateSaved));
 
             listView.ItemsSource = resultsFromSQL;

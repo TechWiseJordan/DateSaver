@@ -3,40 +3,34 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DateSaver.MainPage">
     <Grid>
-        <ScrollView VerticalOptions="FillAndExpand" Padding="18,60,18,10">
-            <VerticalStackLayout Padding="0,0,0,0" Spacing="55" VerticalOptions="FillAndExpand">
-                <ListView x:Name="listView" FlexLayout.Grow="1" HasUnevenRows="True" ItemTapped="listView_ItemTapped">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <VerticalStackLayout Padding="10">
-                                    <Label Text="{Binding DateName}" FontSize="20" FontAttributes="Bold" />
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="Auto" />
-                                            <ColumnDefinition Width="*" />
-                                            <ColumnDefinition Width="Auto" />
-                                        </Grid.ColumnDefinitions>
-                                        <Label Grid.Column="0" Text="{Binding DateSaved, StringFormat='{0:d}'}" FontAttributes="Bold" />
-                                        <Label Grid.Column="2" Text="{Binding CountDown, StringFormat='{0:d} Days'}" FontAttributes="Bold" />
-                                    </Grid>
-                                </VerticalStackLayout>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </VerticalStackLayout>
-        </ScrollView>
-        <StackLayout BackgroundColor="Black" VerticalOptions="Start" Padding="0,0,0,0">
-            <Label 
-            Text="Home"
-            FontSize="Title"
-            Margin="15,13,15,7"
-            VerticalOptions="Start"
-            HorizontalOptions="Start"
-            />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="140"/>
+        </Grid.ColumnDefinitions>
 
-            <ImageButton
+        <!--Row 0-->
+        <BoxView 
+            Grid.Row="0"
+            Grid.ColumnSpan="2"
+            Color="Black" 
+            />
+        <Label 
+            Grid.Row="0"
+            Grid.Column="0"
+            x:Name="titleLbl"
+            Text="Home"
+            HorizontalOptions="Start"
+            VerticalOptions="Center" 
+            FontSize="Title"
+            Padding="20,0,0,0"
+            />
+        <ImageButton
+            Grid.Row="0"
+            Grid.Column="1"
             x:Name="newBtn"
             Source="add_image.png"
             SemanticProperties.Hint="Adds a new date to be saved"
@@ -44,11 +38,12 @@
             VerticalOptions="Start"
             HorizontalOptions="End"
             MaximumWidthRequest="60"
-            Margin="0,-70,15,0"
-            Padding="10,0,10,-20"
+            Margin="0,0,20,0"
+            Padding="10,5,10,5"
             />
-
-            <ImageButton
+        <ImageButton
+            Grid.Row="0"
+            Grid.Column="1"
             x:Name="creditsBtn"
             Source="more_vert_image.png"
             SemanticProperties.Hint="Moves to the credits page"
@@ -56,9 +51,32 @@
             VerticalOptions="Start"
             HorizontalOptions="End"
             MaximumWidthRequest="55"
-            Margin="0,-76,60,0"
-            Padding="10,0,10,-20"
-        />
-        </StackLayout>
+            Margin="0,0,70,0"
+            Padding="10,5,10,5"
+            />
+        
+        <!--Row 1-->
+        <ScrollView Grid.Row="1" Grid.ColumnSpan="2" Padding="18,13,18,10">
+            <ListView  x:Name="listView" FlexLayout.Grow="1"  HasUnevenRows="True" ItemTapped="listView_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <VerticalStackLayout Padding="10">
+                                <Label Text="{Binding DateName}" FontSize="20" FontAttributes="Bold" />
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Text="{Binding DateSaved, StringFormat='{0:d}'}" FontAttributes="Bold" />
+                                    <Label Grid.Column="2" Text="{Binding CountDown, StringFormat='{0:d} Days'}" FontAttributes="Bold" />
+                                </Grid>
+                            </VerticalStackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
     </Grid>
 </ContentPage>

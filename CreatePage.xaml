@@ -16,7 +16,7 @@
             <ColumnDefinition />
             <ColumnDefinition Width="80"/>
         </Grid.ColumnDefinitions>
-        
+
         <!--Row 0-->
         <BoxView 
             Grid.Row="0"
@@ -93,7 +93,7 @@
             FontSize="20"
             Clicked="saveBtn_Clicked" 
             Margin="25,0,25,25"
-            HeightRequest="60"
+            HeightRequest="55"
             VerticalOptions="Start"
             />
         <Button 
@@ -103,53 +103,9 @@
             Text="Delete" 
             FontSize="20"
             Clicked="deleteBtn_Clicked" 
-            Margin="25,75,25,25"
-            HeightRequest="60"
+            Margin="25,70,25,25"
+            HeightRequest="55"
             VerticalOptions="Start"
             />
     </Grid>
-
-
-<!--
-    <VerticalStackLayout 
-         Padding="0,0"
-         Spacing="25">
-        <Label Padding="10"
-            Margin="10"
-            Text="Save, Edit, or Delete Dates"
-            Style="{StaticResource SubHeadline}"
-            SemanticProperties.HeadingLevel="Level2"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" 
-        />
-        <VerticalStackLayout Padding="20" FlexLayout.Basis="400">
-            <Entry 
-                Grid.Row="1"
-                Grid.ColumnSpan="2"
-                x:Name="nameEntryField" 
-                Placeholder="Name" 
-            />
-            <DatePicker
-                x:Name="dateEntryField"
-                Format="d"
-                MinimumDate="01/01/1900"
-                DateSelected="DateSelected"
-            />
-            <Grid>
-                <Label
-                    Text="Repeat?" 
-                    VerticalOptions="CenterAndExpand"
-                />
-                <CheckBox 
-                    x:Name="repeatCheckBox" 
-                    VerticalOptions="StartAndExpand"
-                    HorizontalOptions="Start"
-                    Margin="50,0,0,0"
-                />
-            </Grid>
-            <Button x:Name="saveBtn" Text="Save" Clicked="saveBtn_Clicked" Margin="0,20,0,0"/>
-            <Button x:Name="deleteBtn" Text="Delete" Clicked="deleteBtn_Clicked" Margin="0,20,0,0"/>
-        </VerticalStackLayout>
-    </VerticalStackLayout>
-    -->
 </ContentPage>
