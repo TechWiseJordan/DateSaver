@@ -22,11 +22,8 @@
             Grid.Row="0"
             Grid.Column="0"
             x:Name="titleLbl"
+            Style="{StaticResource Title}"
             Text="Home"
-            HorizontalOptions="Start"
-            VerticalOptions="Center" 
-            FontSize="Title"
-            Padding="20,0,0,0"
             />
         <ImageButton
             Grid.Row="0"
@@ -40,6 +37,7 @@
             MaximumWidthRequest="60"
             Margin="0,0,20,0"
             Padding="10,5,10,5"
+            CornerRadius="100"
             />
         <ImageButton
             Grid.Row="0"
@@ -53,26 +51,29 @@
             MaximumWidthRequest="55"
             Margin="0,0,70,0"
             Padding="10,5,10,5"
+            CornerRadius="100"
             />
         
         <!--Row 1-->
-        <ScrollView Grid.Row="1" Grid.ColumnSpan="2" Padding="18,13,18,10">
-            <ListView  x:Name="listView" FlexLayout.Grow="1"  HasUnevenRows="True" ItemTapped="listView_ItemTapped">
+        <ScrollView Grid.Row="1" Grid.ColumnSpan="2" Padding="18,0,18,10">
+            <ListView  x:Name="listView" FlexLayout.Grow="1"  HasUnevenRows="True" ItemTapped="listView_ItemTapped" SeparatorVisibility="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <VerticalStackLayout Padding="10">
-                                <Label Text="{Binding DateName}" FontSize="20" FontAttributes="Bold" />
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto" />
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="Auto" />
-                                    </Grid.ColumnDefinitions>
-                                    <Label Grid.Column="0" Text="{Binding DateSaved, StringFormat='{0:d}'}" FontAttributes="Bold" />
-                                    <Label Grid.Column="2" Text="{Binding CountDown, StringFormat='{0:d} Days'}" FontAttributes="Bold" />
-                                </Grid>
-                            </VerticalStackLayout>
+                            <Border StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="{StaticResource OffBlack}" StrokeThickness="0" Padding="5" Margin="0,5,0,10">
+                                <VerticalStackLayout Padding="10">
+                                    <Label Text="{Binding DateName}" FontSize="20" FontAttributes="Bold" />
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <Label Grid.Column="0" Text="{Binding DateSaved, StringFormat='{0:d}'}" FontAttributes="Bold" />
+                                        <Label Grid.Column="2" Text="{Binding CountDown, StringFormat='{0:d} Days'}" FontAttributes="Bold" />
+                                    </Grid>
+                                </VerticalStackLayout>
+                            </Border>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

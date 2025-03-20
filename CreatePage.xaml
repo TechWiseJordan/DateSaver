@@ -7,7 +7,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
-            <RowDefinition Height="80"/>
+            <RowDefinition Height="70"/>
             <RowDefinition Height="60"/>
             <RowDefinition Height="60"/>
             <RowDefinition />
@@ -27,11 +27,8 @@
             Grid.Row="0"
             Grid.Column="0"
             x:Name="titleLbl"
+            Style="{StaticResource Title}"
             Text="Save, Edit, or Delete Dates"
-            HorizontalOptions="Start"
-            VerticalOptions="Center" 
-            FontSize="Title"
-            Padding="20,0,0,0"
             />
         <ImageButton
             Grid.Row="0"
@@ -44,9 +41,21 @@
             HorizontalOptions="End"
             Margin="0,0,20,0"
             Padding="15,15,5,15"
+            CornerRadius="100"
             />
 
         <!--Row 1-->
+        <Border 
+            Grid.Row="1"
+            Grid.RowSpan="3"
+            Grid.ColumnSpan="2"
+            StrokeShape="RoundRectangle 10,10,10,10" 
+            BackgroundColor="{StaticResource OffBlack}" 
+            StrokeThickness="0" 
+            Padding="5" 
+            Margin="18,5,18,18">
+        </Border>
+        
         <Entry 
             Grid.Row="1"
             Grid.ColumnSpan="2"
@@ -92,7 +101,7 @@
             Text="Save" 
             FontSize="20"
             Clicked="saveBtn_Clicked" 
-            Margin="25,0,25,25"
+            Margin="18,0,18,25"
             HeightRequest="55"
             VerticalOptions="Start"
             />
@@ -103,9 +112,10 @@
             Text="Delete" 
             FontSize="20"
             Clicked="deleteBtn_Clicked" 
-            Margin="25,70,25,25"
+            Margin="18,70,18,25"
             HeightRequest="55"
             VerticalOptions="Start"
             />
+
     </Grid>
 </ContentPage>

@@ -22,10 +22,7 @@
             Grid.Row="0"
             Grid.Column="0"
             Text="Copyrights"
-            HorizontalOptions="Start"
-            VerticalOptions="Center" 
-            FontSize="Title"
-            Padding="20,0,0,0"
+            Style="{StaticResource Title}"
             />
         <ImageButton
             Grid.Row="0"
@@ -37,7 +34,8 @@
             VerticalOptions="Start"
             HorizontalOptions="End"
             Margin="0,0,20,0"
-            Padding="15,15,5,15"
+            Padding="15,15,15,15"
+            CornerRadius="100"
             />
         
         <!--Row 1-->
