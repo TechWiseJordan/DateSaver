@@ -55,15 +55,22 @@
             Padding="5" 
             Margin="18,5,18,18">
         </Border>
-        
+
         <Entry 
             Grid.Row="1"
             Grid.ColumnSpan="2"
             x:Name="nameEntryField" 
             Placeholder="Name"     
             FontSize="20"
-            Margin="25,15,25,15"
-            />
+            Margin="25,10,25,15">
+            <Entry.Keyboard>
+                <Keyboard x:FactoryMethod="Create">
+                    <x:Arguments>
+                        <KeyboardFlags>Suggestions,CapitalizeSentence</KeyboardFlags>
+                    </x:Arguments>
+                </Keyboard>
+            </Entry.Keyboard>
+        </Entry>
 
         <!--Row 2-->
         <DatePicker

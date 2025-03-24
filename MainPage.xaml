@@ -30,7 +30,7 @@
             Grid.Column="1"
             x:Name="newBtn"
             Source="add_image.png"
-            SemanticProperties.Hint="Adds a new date to be saved"
+            SemanticProperties.Hint="Moves to the new date page"
             Clicked="newBtn_Clicked"
             VerticalOptions="Start"
             HorizontalOptions="End"
@@ -56,11 +56,11 @@
         
         <!--Row 1-->
         <ScrollView Grid.Row="1" Grid.ColumnSpan="2" Padding="18,0,18,10">
-            <ListView  x:Name="listView" FlexLayout.Grow="1"  HasUnevenRows="True" ItemTapped="listView_ItemTapped" SeparatorVisibility="None">
+            <ListView  x:Name="listView" FlexLayout.Grow="1"  HasUnevenRows="True" ItemTapped="listView_ItemTapped" SeparatorVisibility="None" SelectionMode="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Border StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="{StaticResource OffBlack}" StrokeThickness="0" Padding="5" Margin="0,5,0,10">
+                            <Border StrokeShape="RoundRectangle 10,10,10,10" BackgroundColor="{StaticResource OffBlack}" StrokeThickness="0" Padding="5" Margin="0,5,0,10" >
                                 <VerticalStackLayout Padding="10">
                                     <Label Text="{Binding DateName}" FontSize="20" FontAttributes="Bold" />
                                     <Grid>

@@ -1,4 +1,5 @@
 using Microsoft.VisualBasic;
+using System.Threading.Tasks;
 
 namespace DateSaver;
 
@@ -48,6 +49,8 @@ public partial class CreatePage : ContentPage
 
     private async void saveBtn_Clicked(object sender, EventArgs e)
     {
+        HideKeyboard();
+
         if (_editDateId == 0)
         {
             // Add Date
@@ -78,6 +81,9 @@ public partial class CreatePage : ContentPage
 
     private async void deleteBtn_Clicked(object sender, EventArgs e)
     {
+        HideKeyboard();
+
+
         if (_editDateId == 0) // Go home
         {
             await Navigation.PushModalAsync(new MainPage(_dbService));
@@ -94,6 +100,17 @@ public partial class CreatePage : ContentPage
 
     private async void backBtn_Clicked(object sender, EventArgs e)
     {
+        HideKeyboard();
+
         await Navigation.PushModalAsync(new MainPage(_dbService));
+    }
+
+
+    private async void HideKeyboard()
+    {
+        if (nameEntryField.IsSoftInputShowing())
+        {
+            await nameEntryField.HideSoftInputAsync(System.Threading.CancellationToken.None);
+        }
     }
 }
