@@ -9,24 +9,16 @@ public partial class CreatePage : ContentPage
     private int _editDateId = 0;
     private DateTime _editDateSaved = DateTime.Today.Date;
 
-    public CreatePage(LocalDbService dbService) // Default constuctor which should NOT be called
+    public CreatePage(LocalDbService dbService)
     {
         InitializeComponent();
         _dbService = dbService;
-    }
-    
-    public CreatePage(LocalDbService dbService, int id)
-    {
-        InitializeComponent();
-        _dbService = dbService;
-
-        _editDateId = id;
 
         titleLbl.Text = "Save Date";
         deleteBtn.Text = "Cancel";
     }
     
-    public CreatePage(LocalDbService dbService, int id, ItemTappedEventArgs e)
+    public CreatePage(LocalDbService dbService, ItemTappedEventArgs e)
     {
         InitializeComponent();
         _dbService = dbService;

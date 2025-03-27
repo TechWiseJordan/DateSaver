@@ -11,6 +11,10 @@
       "RelativeMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|solutionrelative:createpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|c:\\users\\droj1\\onedrive\\documents\\programs\\datesaver\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|solutionrelative:mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|c:\\users\\droj1\\onedrive\\documents\\programs\\datesaver\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|solutionrelative:mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -25,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|c:\\users\\droj1\\onedrive\\documents\\programs\\datesaver\\attributionpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|solutionrelative:attributionpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|c:\\users\\droj1\\onedrive\\documents\\programs\\datesaver\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|solutionrelative:mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{347C3158-75A4-4226-A378-902FFA29550A}|DateSaver.csproj|c:\\users\\droj1\\onedrive\\documents\\programs\\datesaver\\attributionpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,7 +66,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "colors.xml",
               "DocumentMoniker": "C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\Platforms\\Android\\Resources\\values\\colors.xml",
               "RelativeDocumentMoniker": "Platforms\\Android\\Resources\\values\\colors.xml",
@@ -74,12 +74,11 @@
               "RelativeToolTip": "Platforms\\Android\\Resources\\values\\colors.xml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2025-03-24T18:26:25.978Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T18:26:25.978Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Styles.xaml",
               "DocumentMoniker": "C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\Resources\\Styles\\Styles.xaml",
               "RelativeDocumentMoniker": "Resources\\Styles\\Styles.xaml",
@@ -105,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "AttributionPage.xaml",
               "DocumentMoniker": "C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\AttributionPage.xaml",
               "RelativeDocumentMoniker": "AttributionPage.xaml",
@@ -113,8 +112,7 @@
               "RelativeToolTip": "AttributionPage.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-18T21:52:02.103Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T21:52:02.103Z"
             },
             {
               "$type": "Document",
@@ -136,7 +134,7 @@
               "RelativeDocumentMoniker": "CreatePage.xaml",
               "ToolTip": "C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\CreatePage.xaml",
               "RelativeToolTip": "CreatePage.xaml",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAD0AAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAD0AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-01-29T19:47:03.723Z",
               "EditorCaption": ""
@@ -149,14 +147,14 @@
               "RelativeDocumentMoniker": "CreatePage.xaml.cs",
               "ToolTip": "C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\CreatePage.xaml.cs",
               "RelativeToolTip": "CreatePage.xaml.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAwwGsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-28T19:40:37.853Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\MainPage.xaml",
               "RelativeDocumentMoniker": "MainPage.xaml",
@@ -169,13 +167,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "MainPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\MainPage.xaml.cs",
               "RelativeDocumentMoniker": "MainPage.xaml.cs",
               "ToolTip": "C:\\Users\\Droj1\\OneDrive\\Documents\\Programs\\DateSaver\\MainPage.xaml.cs",
               "RelativeToolTip": "MainPage.xaml.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAwwDUAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-13T18:39:23.371Z",
               "EditorCaption": ""
@@ -202,8 +200,7 @@
               "RelativeToolTip": "DateSaver.csproj",
               "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-29T19:39:25.284Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-29T19:39:25.284Z"
             },
             {
               "$type": "Document",

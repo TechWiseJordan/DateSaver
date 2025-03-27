@@ -5,7 +5,6 @@ namespace DateSaver;
 public partial class MainPage : ContentPage
 {
     private readonly LocalDbService _dbService;
-    private int _editDateId;
     private DateTime currentDate = DateTime.Now;
 
 
@@ -27,17 +26,12 @@ public partial class MainPage : ContentPage
         {
             List<Date> resultsFromSQL = await _dbService.GetDates();
 
-
-            foreach (Date date in resultsFromSQL)
-            {
-                // Calculate date countdown
-                date.CountDown = (date.DateSaved.Date - currentDate.Date).Days;
-            }
+            resultsFromSQL = CalculateCountDown(resultsFromSQL);
 
             foreach (Date date in resultsFromSQL)
             {
                 // Check if date needs to be repeated
-                if (date.CountDown < 0 && date.RepeatDate == true) // <-- CountDown is always ZERO here stupid
+                if (date.CountDown < 0 && date.RepeatDate == true)
                 {
                     while (date.DateSaved <= currentDate)
                     {
@@ -55,27 +49,41 @@ public partial class MainPage : ContentPage
             }
 
             // This recalculates the countdown and should really by done in the foreach above
-            foreach (Date date in resultsFromSQL)
-            {
-                // Calculate date countdown
-                date.CountDown = (date.DateSaved.Date - currentDate.Date).Days;
-            }
+            resultsFromSQL = CalculateCountDown(resultsFromSQL);
 
+            // Sort the list by date
             resultsFromSQL.Sort((x, y) => DateTime.Compare(x.DateSaved, y.DateSaved));
 
             listView.ItemsSource = resultsFromSQL;
         }
         catch (Exception e)
         {
+            Console.WriteLine("First time startup error");
             Console.WriteLine(e.Message);
         }
     }
 
+    private List<Date> CalculateCountDown(List<Date> dateList)
+    {
+        foreach (Date date in dateList)
+        {
+            date.CountDown = (date.DateSaved.Date - currentDate.Date).Days;
+        }
+
+        return dateList;
+    }
+
+
+
+    private async void creditsBtn_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushModalAsync(new AttributionPage(_dbService));
+    }
 
     private async void newBtn_Clicked(object sender, EventArgs e)
     {
         // Go to create page with no data
-        await Navigation.PushModalAsync(new CreatePage(_dbService, _editDateId));
+        await Navigation.PushModalAsync(new CreatePage(_dbService));
 
         listView.ItemsSource = await _dbService.GetDates();
     }
@@ -83,11 +91,6 @@ public partial class MainPage : ContentPage
     private async void listView_ItemTapped(object sender, ItemTappedEventArgs e)
     {
         // Go to create page with data
-        await Navigation.PushModalAsync(new CreatePage(_dbService, _editDateId, e));
-    }
-
-    private async void creditsBtn_Clicked(object sender, EventArgs e)
-    {
-        await Navigation.PushModalAsync(new AttributionPage(_dbService));
+        await Navigation.PushModalAsync(new CreatePage(_dbService, e));
     }
 }
