@@ -70,6 +70,7 @@
                                             <ColumnDefinition Width="Auto" />
                                         </Grid.ColumnDefinitions>
                                         <Label Grid.Column="0" Text="{Binding DateSaved, StringFormat='{0:d}'}" FontAttributes="Bold" />
+                                        <Label Padding="25,0,0,0" Grid.Column="1" Text="{Binding Age, StringFormat='Age: {0:d}'}" FontAttributes="Bold" />
                                         <Label Grid.Column="2" Text="{Binding CountDown, StringFormat='{0:d} Days'}" FontAttributes="Bold" />
                                     </Grid>
                                 </VerticalStackLayout>

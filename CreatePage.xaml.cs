@@ -8,6 +8,7 @@ public partial class CreatePage : ContentPage
     private readonly LocalDbService _dbService;
     private int _editDateId = 0;
     private DateTime _editDateSaved = DateTime.Today.Date;
+    private DateTime tempDate;
 
     public CreatePage(LocalDbService dbService)
     {
@@ -29,9 +30,12 @@ public partial class CreatePage : ContentPage
         nameEntryField.Text = editDate.DateName;
         dateEntryField.Date = editDate.DateSaved;
         repeatCheckBox.IsChecked = editDate.RepeatDate;
+        trackAgeCheckBox.IsChecked = editDate.TrackAge;
 
         titleLbl.Text = "Edit or Delete Date";
         deleteBtn.Text = "Delete";
+
+        tempDate = editDate.OriginalDateSaved;
     }
 
     private void DateSelected(object sender, DateChangedEventArgs e)
@@ -51,7 +55,10 @@ public partial class CreatePage : ContentPage
             {
                 DateName = nameEntryField.Text,
                 DateSaved = _editDateSaved, 
-                RepeatDate = repeatCheckBox.IsChecked               
+                OriginalDateSaved = _editDateSaved, 
+                RepeatDate = repeatCheckBox.IsChecked,
+                TrackAge = trackAgeCheckBox.IsChecked
+                
             });
         }
         else
@@ -63,7 +70,9 @@ public partial class CreatePage : ContentPage
                 Id = _editDateId,
                 DateName = nameEntryField.Text,
                 DateSaved = _editDateSaved,
-                RepeatDate = repeatCheckBox.IsChecked
+                OriginalDateSaved = tempDate,
+                RepeatDate = repeatCheckBox.IsChecked,
+                TrackAge = trackAgeCheckBox.IsChecked
             });
 
             _editDateId = 0;
@@ -74,7 +83,6 @@ public partial class CreatePage : ContentPage
     private async void deleteBtn_Clicked(object sender, EventArgs e)
     {
         HideKeyboard();
-
 
         if (_editDateId == 0) // Go home
         {

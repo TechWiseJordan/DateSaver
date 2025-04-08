@@ -6,6 +6,7 @@ public partial class MainPage : ContentPage
 {
     private readonly LocalDbService _dbService;
     private DateTime currentDate = DateTime.Now;
+    private DateTime tempDate;
 
 
     public MainPage(LocalDbService dbService)
@@ -30,6 +31,90 @@ public partial class MainPage : ContentPage
 
             foreach (Date date in resultsFromSQL)
             {
+                switch (date.CountDown, date.RepeatDate, date.TrackAge)
+                {
+                    // Repeat, Track
+                    case ( < 0, true, true):
+                        while (date.DateSaved <= currentDate)
+                        {
+                            date.DateSaved = date.DateSaved.AddYears(1);
+                            //date.Age = (currentDate.Year - date.OriginalDateSaved.Year);
+                            date.Age = CalculateAge(date.OriginalDateSaved);
+                        }
+
+                        await _dbService.Update(new Date
+                        {
+                            Id = date.Id,
+                            DateName = date.DateName,
+                            DateSaved = date.DateSaved,
+                            OriginalDateSaved = date.OriginalDateSaved,
+                            RepeatDate = date.RepeatDate,
+                            Age = date.Age,
+                            TrackAge = date.TrackAge
+                        });
+
+                        break;
+
+                        // Repeat, Track
+                    case ( > 0, true, true):
+                        //date.Age = (currentDate.Year - date.OriginalDateSaved.Year);
+                        date.Age = CalculateAge(date.OriginalDateSaved);
+
+                        break;
+
+                    // Repeat, Do not Track
+                    case ( < 0, true, false):
+                        while (date.DateSaved <= currentDate)
+                        {
+                            date.DateSaved = date.DateSaved.AddYears(1);
+                        }
+
+                        await _dbService.Update(new Date
+                        {
+                            Id = date.Id,
+                            DateName = date.DateName,
+                            DateSaved = date.DateSaved,
+                            OriginalDateSaved = date.OriginalDateSaved,
+                            RepeatDate = date.RepeatDate,
+                            Age = date.Age,
+                            TrackAge = date.TrackAge
+                        });
+
+                        break;
+
+                    // Do not Repeat, Track
+                    case ( < 0, false, true):
+                        //date.Age = (currentDate.Year - date.OriginalDateSaved.Year) - 1;
+                        date.Age = CalculateAge(date.OriginalDateSaved);
+
+                        await _dbService.Update(new Date
+                        {
+                            Id = date.Id,
+                            DateName = date.DateName,
+                            DateSaved = date.DateSaved,
+                            OriginalDateSaved = date.OriginalDateSaved,
+                            RepeatDate = date.RepeatDate
+                        });
+
+                        break;
+
+                    // Do not Repeat, Do not Track. Do nothing
+                    case ( < 0, false, false):
+                        break;
+
+                    // Date has not come to pass. Do Nothing
+                    case ( > 0, false, false):
+                        break;
+
+                    // Default error state
+                    default:
+                        Console.WriteLine("MainPage switch error");
+                        break;
+                }
+
+
+                /*
+
                 // Check if date needs to be repeated
                 if (date.CountDown < 0 && date.RepeatDate == true)
                 {
@@ -46,6 +131,7 @@ public partial class MainPage : ContentPage
                         RepeatDate = date.RepeatDate
                     });
                 }
+                */
             }
 
             // This recalculates the countdown and should really by done in the foreach above
@@ -71,6 +157,23 @@ public partial class MainPage : ContentPage
         }
 
         return dateList;
+    }
+
+    private int CalculateAge(DateTime date)
+    {
+        int age;
+        DateTime temp = new DateTime(currentDate.Year, date.Month, date.Day);
+
+        if (currentDate.Date < temp.Date)
+        {
+            age = (currentDate.Year - date.Year) - 1;
+        }
+        else
+        {
+            age = (currentDate.Year - date.Year);
+        }
+
+            return age;
     }
 
 

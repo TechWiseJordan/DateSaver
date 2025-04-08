@@ -15,17 +15,23 @@ namespace DateSaver
         [Column("date_name")]
         public string DateName { get; set; }
 
-        [AllowNull]
-        [Column("description")]
-        public string Description { get; set; }
-
         [Column("date_saved")]
         public DateTime DateSaved { get; set; }
+
+        [Column("original_date_saved")]
+        public DateTime OriginalDateSaved { get; set; }
 
         [Column("countdown")]
         public int CountDown { get; set; }
 
-        [Column("repeatdate")]
+        [Column("repeat_date")]
         public Boolean RepeatDate { get; set; }
+
+        [AllowNull]
+        [Column("age")]
+        public int Age { get; set; }
+
+        [Column("track_age")]
+        public Boolean TrackAge { get; set; }
     }
 }

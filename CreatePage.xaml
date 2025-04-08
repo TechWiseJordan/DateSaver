@@ -97,7 +97,22 @@
             Grid.Column="0"
             x:Name="repeatCheckBox" 
             HorizontalOptions="Start"
-            Margin="100,0,0,30"
+            Margin="98,0,0,30"
+            />
+
+        <Label
+            Grid.Row="3"
+            Grid.Column="0"
+            Text="Track Age?" 
+            FontSize="20"
+            Margin="155,0,0,0"
+            />
+        <CheckBox 
+            Grid.Row="3"
+            Grid.Column="0"
+            x:Name="trackAgeCheckBox" 
+            HorizontalOptions="Start"
+            Margin="260,0,0,30"
             />
 
         <!--Row 4-->
