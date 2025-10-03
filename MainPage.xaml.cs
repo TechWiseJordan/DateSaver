@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using Microsoft.Maui.Controls.Internals;
+using System.Linq;
 
 namespace DateSaver;
 
@@ -38,7 +39,6 @@ public partial class MainPage : ContentPage
                         while (date.DateSaved <= currentDate)
                         {
                             date.DateSaved = date.DateSaved.AddYears(1);
-                            //date.Age = (currentDate.Year - date.OriginalDateSaved.Year);
                             date.Age = CalculateAge(date.OriginalDateSaved);
                         }
 
@@ -57,7 +57,6 @@ public partial class MainPage : ContentPage
 
                         // Repeat, Track
                     case ( > 0, true, true):
-                        //date.Age = (currentDate.Year - date.OriginalDateSaved.Year);
                         date.Age = CalculateAge(date.OriginalDateSaved);
 
                         break;
@@ -84,7 +83,6 @@ public partial class MainPage : ContentPage
 
                     // Do not Repeat, Track
                     case ( < 0, false, true):
-                        //date.Age = (currentDate.Year - date.OriginalDateSaved.Year) - 1;
                         date.Age = CalculateAge(date.OriginalDateSaved);
 
                         await _dbService.Update(new Date
@@ -111,27 +109,6 @@ public partial class MainPage : ContentPage
                         Console.WriteLine("MainPage switch error");
                         break;
                 }
-
-
-                /*
-
-                // Check if date needs to be repeated
-                if (date.CountDown < 0 && date.RepeatDate == true)
-                {
-                    while (date.DateSaved <= currentDate)
-                    {
-                        date.DateSaved = date.DateSaved.AddYears(1);
-                    }
-
-                    await _dbService.Update(new Date
-                    {
-                        Id = date.Id,
-                        DateName = date.DateName,
-                        DateSaved = date.DateSaved,
-                        RepeatDate = date.RepeatDate
-                    });
-                }
-                */
             }
 
             // This recalculates the countdown and should really by done in the foreach above

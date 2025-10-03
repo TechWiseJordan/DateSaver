@@ -70,8 +70,41 @@
                                             <ColumnDefinition Width="Auto" />
                                         </Grid.ColumnDefinitions>
                                         <Label Grid.Column="0" Text="{Binding DateSaved, StringFormat='{0:d}'}" FontAttributes="Bold" />
-                                        <Label Padding="25,0,0,0" Grid.Column="1" Text="{Binding Age, StringFormat='Age: {0:d}'}" FontAttributes="Bold" />
-                                        <Label Grid.Column="2" Text="{Binding CountDown, StringFormat='{0:d} Days'}" FontAttributes="Bold" />
+                                        <Label x:Name="ageLbl" Padding="25,0,0,0" Grid.Column="1" Text="{Binding Age, StringFormat='Age: {0:d}'}" FontAttributes="Bold">
+                                            <Label.Triggers>
+                                                <DataTrigger
+                                                    TargetType="Label"
+                                                    Binding="{Binding TrackAge}"
+                                                    Value="False">
+                                                    <Setter
+                                                        Property="Text"
+                                                        Value=""
+                                                        />
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                        </Label>
+                                        <Label Grid.Column="2" Text="{Binding CountDown, StringFormat='{0:d} Days'}" FontAttributes="Bold">
+                                            <Label.Triggers>
+                                                <DataTrigger
+                                                    TargetType="Label"
+                                                    Binding="{Binding CountDown}"
+                                                    Value="1">
+                                                    <Setter
+                                                        Property="Text"
+                                                        Value="{Binding CountDown, StringFormat='{0:d} Day'}"
+                                                    />
+                                                </DataTrigger>
+                                                <DataTrigger
+                                                    TargetType="Label"
+                                                    Binding="{Binding CountDown}"
+                                                    Value="-1">
+                                                    <Setter
+                                                        Property="Text"
+                                                        Value="{Binding CountDown, StringFormat='{0:d} Day'}"
+                                                    />
+                                                </DataTrigger>
+                                            </Label.Triggers>
+                                        </Label>
                                     </Grid>
                                 </VerticalStackLayout>
                             </Border>
