@@ -21,7 +21,7 @@
 		<Nullable>enable</Nullable>
 
 		<!-- Display name -->
-		<ApplicationTitle>DateSaver</ApplicationTitle>
+		<ApplicationTitle>Date Saver</ApplicationTitle>
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.datesaver</ApplicationId>
